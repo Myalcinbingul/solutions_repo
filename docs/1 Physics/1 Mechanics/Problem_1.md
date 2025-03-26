@@ -1,5 +1,5 @@
 # Problem 1
-# **Problem 1: Investigating the Range as a Function of the Angle of Projection**
+# Investigating the Range as a Function of the Angle of Projection
 
 ## **Motivation**
 Projectile motion is a fundamental topic in physics that provides insight into motion under the influence of gravity. By analyzing how the range of a projectile depends on its angle of projection, we can explore the underlying principles of kinematics and dynamics.
