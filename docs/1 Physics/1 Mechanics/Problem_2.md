@@ -175,7 +175,7 @@ plt.show()
 
 We use Python to numerically solve and visualize the forced damped pendulum using the Runge-Kutta method.
 
-![alt text](image-12.png)
+![alt text](image-13.png)
 
 ```python
 import numpy as np
@@ -214,7 +214,7 @@ plt.show()
 ### **4.1 Phase Portrait and Poincaré Section**
 To visualize transitions to chaos, we plot phase portraits and Poincaré sections:
 
-![alt text](image-13.png)
+![alt text](image-12.png)
 
 ```python
 plt.plot(sol.y[0], sol.y[1], label='Phase Portrait')
