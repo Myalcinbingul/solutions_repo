@@ -292,58 +292,60 @@ F_{\text{drag}} = - k v^2
 <h1 id="projectile-motion-simulation-with-air-resistance">Projectile Motion Simulation with Air Resistance</h1>
 <p>This project simulates projectile motion with air resistance using Python and NumPy.<br/>
 The code was executed in <strong>Google Colab</strong>, and the generated image is included below.</p>
-<h2 id="python-code-in-colab"><strong>Python Code in Colab</strong></h2>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="function-to-simulate-projectile-motion-with-air-resistance">Function to simulate projectile motion with air resistance</h1>
-<p>def projectile_motion(v0, theta, h=0, wind=0, k=0.1, g=9.81, t_max=10, dt=0.01):
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Function to simulate projectile motion with air resistance
+def projectile_motion(v0, theta, h=0, wind=0, k=0.1, g=9.81, t_max=10, dt=0.01):
     theta_rad = np.radians(theta)
     v0x = v0 * np.cos(theta_rad) + wind  # Initial horizontal velocity, including wind effect
-    v0y = v0 * np.sin(theta_rad)         # Initial vertical velocity</p>
-<pre><code># Initial conditions
-x, y = 0, h
-vx, vy = v0x, v0y
+    v0y = v0 * np.sin(theta_rad)         # Initial vertical velocity
 
-# Lists to store the trajectory
-x_vals, y_vals = [x], [y]
+    # Initial conditions
+    x, y = 0, h
+    vx, vy = v0x, v0y
 
-t = 0
-while y &gt;= 0 and t &lt; t_max:  # Stop if projectile hits the ground
-    # Calculate air resistance forces
-    fx = -k * vx
-    fy = -k * vy
+    # Lists to store the trajectory
+    x_vals, y_vals = [x], [y]
 
-    # Update velocities
-    ax = fx  # No horizontal acceleration due to gravity (only air resistance)
-    ay = -g + fy  # Vertical acceleration due to gravity and air resistance
+    t = 0
+    while y &gt;= 0 and t &lt; t_max:  # Stop if projectile hits the ground
+        # Calculate air resistance forces
+        fx = -k * vx
+        fy = -k * vy
 
-    vx += ax * dt
-    vy += ay * dt
+        # Update velocities
+        ax = fx  # No horizontal acceleration due to gravity (only air resistance)
+        ay = -g + fy  # Vertical acceleration due to gravity and air resistance
 
-    # Update positions
-    x += vx * dt
-    y += vy * dt
+        vx += ax * dt
+        vy += ay * dt
 
-    # Store the current position
-    x_vals.append(x)
-    y_vals.append(y)
+        # Update positions
+        x += vx * dt
+        y += vy * dt
 
-    t += dt
+        # Store the current position
+        x_vals.append(x)
+        y_vals.append(y)
 
-return np.array(x_vals), np.array(y_vals)
-</code></pre>
-<h1 id="parameters">Parameters</h1>
-<p>v0 = 50  # Initial velocity (m/s)
+        t += dt
+
+    return np.array(x_vals), np.array(y_vals)
+
+# Parameters
+v0 = 50  # Initial velocity (m/s)
 theta = 45  # Launch angle (degrees)
 h = 0  # Initial height (m)
 wind = 5  # Wind speed (m/s), positive for tailwind
 k = 0.05  # Air resistance coefficient
-t_max = 15  # Max time for simulation</p>
-<h1 id="simulate-projectile-motion-with-air-resistance-and-wind">Simulate projectile motion with air resistance and wind</h1>
-<p>x_vals, y_vals = projectile_motion(v0, theta, h, wind, k, t_max)</p>
-<h1 id="plotting">Plotting</h1>
-<p>plt.figure(figsize=(10, 6))
+t_max = 15  # Max time for simulation
+
+# Simulate projectile motion with air resistance and wind
+x_vals, y_vals = projectile_motion(v0, theta, h, wind, k, t_max)
+
+# Plotting
+plt.figure(figsize=(10, 6))
 plt.plot(x_vals, y_vals, label="Projectile Path with Wind and Air Resistance", color='b')
 plt.title(f"Projectile Motion with Air Resistance and Wind\nInitial Velocity: {v0} m/s, Angle: {theta}°", fontsize=14)
 plt.xlabel("Horizontal Distance (m)", fontsize=12)
@@ -351,9 +353,11 @@ plt.ylabel("Vertical Distance (m)", fontsize=12)
 plt.grid(True)
 plt.legend()
 plt.xlim(0, max(x_vals) + 10)
-plt.ylim(0, max(y_vals) + 10)</p>
-<h1 id="show-plot">Show plot</h1>
-<p>plt.show()</p>
+plt.ylim(0, max(y_vals) + 10)
+
+# Show plot
+plt.show()
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
