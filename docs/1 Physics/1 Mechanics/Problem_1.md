@@ -145,7 +145,7 @@ Instead of using analytical equations, we can solve the motion equations numeric
 This project simulates projectile motion with air resistance using Python and NumPy.  
 The code was executed in **Google Colab**, and the generated image is included below.
 
-## **Python Code in Colab**
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -212,3 +212,4 @@ plt.ylim(0, max(y_vals) + 10)
 
 # Show plot
 plt.show()
+```
