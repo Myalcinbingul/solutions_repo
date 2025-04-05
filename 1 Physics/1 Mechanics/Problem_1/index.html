@@ -48,6 +48,14 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-differential-equations-of-motion">1. Differential Equations of Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#without-air-resistance">Without Air Resistance</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -171,86 +179,207 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
-<h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h1>
-<h2 id="motivation"><strong>Motivation</strong></h2>
-<p>Projectile motion is a fundamental topic in physics that provides insight into motion under the influence of gravity. By analyzing how the range of a projectile depends on its angle of projection, we can explore the underlying principles of kinematics and dynamics.</p>
-<p>The motion is governed by a set of equations involving parameters such as:
-- Initial velocity (<span class="arithmatex">\(v_0\)</span>)
-- Acceleration due to gravity (<span class="arithmatex">\(g\)</span>)
-- Launch height (<span class="arithmatex">\(h\)</span>)
-- Launch angle (<span class="arithmatex">\(\theta\)</span>)</p>
-<p>These parameters influence the motion in both the horizontal and vertical directions, leading to a wide range of applications, from sports to aerospace engineering.</p>
+<h2 id="problem-1-investigating-the-range-as-a-function-of-launch-angle">Problem 1: Investigating the Range as a Function of Launch Angle</h2>
 <hr/>
-<h2 id="1-theoretical-foundation"><strong>1. Theoretical Foundation</strong></h2>
-<h3 id="equations-of-motion"><strong>Equations of Motion</strong></h3>
-<p>The motion of a projectile can be analyzed by splitting it into horizontal and vertical components.</p>
-<h4 id="11-kinematic-equations"><strong>1.1 Kinematic Equations</strong></h4>
+<h3 id="motivation">Motivation</h3>
+<p>Projectile motion is a classic physics topic that helps explain the motion of objects under gravity. Our goal is to understand <strong>how the range of a projectile depends on the launch angle</strong>, both:</p>
+<ul>
+<li>analytically (with equations)</li>
+<li>and numerically (via Python simulations)</li>
+</ul>
+<p>We’ll start with no air resistance and gradually introduce more realistic effects like <strong>air drag</strong>, <strong>wind</strong>, and <strong>numerical simulation techniques</strong>.</p>
+<hr/>
+<h3 id="1-differential-equations-of-motion">1. Differential Equations of Motion</h3>
+<h4 id="without-air-resistance">Without Air Resistance</h4>
+<p>We apply Newton’s Second Law:</p>
+<div class="arithmatex">\[
+\vec{F} = m\vec{a}
+\]</div>
+<h2 id="2-numerical-solution-with-air-resistance">2. Numerical Solution (With Air Resistance)</h2>
+<p><strong>Drag Force:</strong> <span class="arithmatex">\(\vec{F}_{drag} = -k\vec{v}\)</span></p>
+<ul>
+<li>Horizontal direction:
+  $$
+  \frac{d^2x}{dt^2} = 0 \quad \Rightarrow \quad \frac{dx}{dt} = v_0 \cos(\theta)
+  $$</li>
+<li>Vertical direction:
+  $$
+  \frac{d^2y}{dt^2} = -g \quad \Rightarrow \quad \frac{dy}{dt} = v_0 \sin(\theta) - gt
+  $$</li>
+</ul>
+<hr/>
+<h3 id="with-air-resistance-linear-drag">With Air Resistance (Linear Drag)</h3>
+<p>Air drag is modeled as a force proportional to velocity:</p>
+<div class="arithmatex">\[
+\vec{F}_{\text{drag}} = -k \vec{v}
+\]</div>
+<h4 id="-horizontal-direction">- Horizontal direction:</h4>
+<div class="arithmatex">\[
+\frac{dv_x}{dt} = -k v_x
+\]</div>
+<h4 id="-vertical-direction">- Vertical direction:</h4>
+<div class="arithmatex">\[
+\frac{dv_y}{dt} = -g - k v_y
+\]</div>
+<p>These are <strong>first-order differential equations</strong> that generally require numerical methods (like Euler’s or Runge-Kutta) to solve.</p>
+<p><img alt="alt text" src="../image-14.png"/></p>
+<hr/>
+<h2 id="2-kinematic-equations">2. Kinematic Equations</h2>
+<p>For a projectile launched from height <span class="arithmatex">\(h\)</span>, initial speed <span class="arithmatex">\(v_0\)</span>, and angle <span class="arithmatex">\(\theta\)</span>, the motion can be described by:</p>
 <ul>
 <li>
-<p>Horizontal motion (constant velocity):
-  $$ x = v_0 \cos(\theta) t $$</p>
+<p><strong>Horizontal displacement</strong>:
+  $$
+  x(t) = v_0 \cos(\theta) \cdot t
+  $$</p>
 </li>
 <li>
-<p>Vertical motion (under acceleration due to gravity):
-  $$ y = h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$</p>
+<p><strong>Vertical displacement</strong>:
+  $$
+  y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+  $$</p>
+</li>
+<li>
+<p><strong>Horizontal velocity</strong>:
+  $$
+  v_x = v_0 \cos(\theta)
+  $$</p>
+</li>
+<li>
+<p><strong>Vertical velocity</strong>:
+  $$
+  v_y(t) = v_0 \sin(\theta) - g t
+  $$</p>
+</li>
+<li>
+<p><strong>Speed at time <span class="arithmatex">\( t \)</span></strong>:
+  $$
+  v(t) = \sqrt{v_x^2 + v_y(t)^2}
+  $$</p>
 </li>
 </ul>
-<h4 id="12-time-of-flight"><strong>1.2 Time of Flight</strong></h4>
-<p>The time it takes for the projectile to hit the ground (<span class="arithmatex">\(y=0\)</span>) is found by solving:</p>
-<div class="arithmatex">\[ h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 = 0 \]</div>
-<p>Solving this quadratic equation for <span class="arithmatex">\(t\)</span>, we get:</p>
-<div class="arithmatex">\[ t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2 g h}}{g} \]</div>
-<h4 id="13-range-of-the-projectile"><strong>1.3 Range of the Projectile</strong></h4>
-<p>The range <span class="arithmatex">\(R\)</span> is the horizontal distance covered by the projectile:</p>
-<div class="arithmatex">\[ R = v_0 \cos(\theta) \times t \]</div>
-<p>Substituting <span class="arithmatex">\(t\)</span> from the time of flight equation:</p>
-<div class="arithmatex">\[ R = \frac{v_0 \cos(\theta) \left( v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2 g h} \right)}{g} \]</div>
-<p>For a projectile launched from ground level (<span class="arithmatex">\(h=0\)</span>), the formula simplifies to:</p>
-<div class="arithmatex">\[ R = \frac{v_0^2 \sin(2\theta)}{g} \]</div>
-<hr/>
-<h2 id="2-analysis-of-the-range"><strong>2. Analysis of the Range</strong></h2>
-<h3 id="21-dependence-on-launch-angle"><strong>2.1 Dependence on Launch Angle</strong></h3>
+<p>Where:
+- <span class="arithmatex">\(g\)</span> is the acceleration due to gravity (typically <span class="arithmatex">\(9.81 \, \text{m/s}^2\)</span>),
+- <span class="arithmatex">\(t\)</span> is the time elapsed,
+- <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(y(t)\)</span> are the positions at time <span class="arithmatex">\(t\)</span>,
+- <span class="arithmatex">\(v_x\)</span>, <span class="arithmatex">\(v_y(t)\)</span> are the velocity components.</p>
 <ul>
-<li>The range is maximum when <span class="arithmatex">\(\theta = 45^\circ\)</span> in the ideal case (<span class="arithmatex">\(h=0\)</span>).</li>
-<li>For nonzero initial height, the maximum angle may shift slightly.</li>
-</ul>
-<h3 id="22-effect-of-other-parameters"><strong>2.2 Effect of Other Parameters</strong></h3>
-<ul>
-<li>Increasing <span class="arithmatex">\(v_0\)</span> increases the range quadratically.</li>
-<li>Higher launch heights generally increase the range.</li>
-<li>Increasing <span class="arithmatex">\(g\)</span> (e.g., on different planets) decreases the range.</li>
+<li>
+<p>Horizontal position:
+  $$
+  x(t) = v_0 \cos(\theta) \cdot t
+  $$</p>
+</li>
+<li>
+<p>Vertical position:
+  $$
+  y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
+  $$</p>
+</li>
 </ul>
 <hr/>
-<h2 id="3-practical-applications"><strong>3. Practical Applications</strong></h2>
-<ul>
-<li><strong>Sports</strong>: Optimizing the angle for maximum distance in long jump, basketball shots, etc.</li>
-<li><strong>Engineering</strong>: Designing artillery, rocket launch trajectories.</li>
-<li><strong>Astrophysics</strong>: Studying trajectories of objects on planetary surfaces.</li>
-</ul>
+<h2 id="3-time-of-flight">⏱ 3. Time of Flight</h2>
+<p>We want to find the total time <span class="arithmatex">\( t \)</span> the projectile stays in the air.</p>
+<p>Set the vertical position <span class="arithmatex">\( y(t) = 0 \)</span> to find when the projectile returns to ground level.</p>
+<p>From the kinematic equation:
+$$
+y(t) = h + v_0 \sin(\theta)t - \frac{1}{2}gt^2
+$$</p>
+<p>Set <span class="arithmatex">\( y(t) = 0 \)</span>:
+$$
+0 = h + v_0 \sin(\theta)t - \frac{1}{2}gt^2
+$$</p>
+<p>This is a quadratic equation in <span class="arithmatex">\( t \)</span>:
+$$
+\frac{1}{2}gt^2 - v_0 \sin(\theta)t - h = 0
+$$</p>
+<p>Solve using the quadratic formula:
+$$
+t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh}}{g}
+$$</p>
+<p><strong>Note:</strong> We discard the negative root since time cannot be negative.</p>
 <hr/>
-<h2 id="4-implementation-in-python"><strong>4. Implementation in Python</strong></h2>
-<p><img alt="alt text" src="../image-6.png"/></p>
+<h2 id="4-range-of-the-projectile">4. Range of the Projectile</h2>
+<p>The <strong>range</strong> is the horizontal distance when <span class="arithmatex">\( y = 0 \)</span>:</p>
+<div class="arithmatex">\[
+R = v_0 \cos(\theta) \cdot t
+\]</div>
+<p>If <span class="arithmatex">\( h = 0 \)</span>, simplifies to:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="alt text" src="../image-15.png"/></th>
+<th style="text-align: center;"><img alt="alt text" src="../image-16.png"/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Insight</strong>: Maximum range occurs when </p>
+<div class="arithmatex">\[
+\theta = 45^\circ
+\]</div>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
-def projectile_range(v0, theta, h=0, g=9.81):
-    theta_rad = np.deg2rad(theta)
-    term = v0 * np.sin(theta_rad)
-    t_flight = (term + np.sqrt(term**2 + 2*g*h)) / g
-    return v0 * np.cos(theta_rad) * t_flight
+# Constants
+g = 9.81  # gravity (m/s^2)
 
-# Generate plot
-angles = np.linspace(0, 90, 100)
-plt.plot(angles, [projectile_range(25, a) for a in angles], label='h=0')
-plt.plot(angles, [projectile_range(25, a, 5) for a in angles], label='h=5m')
-plt.xlabel('Launch Angle (degrees)')
-plt.ylabel('Range (m)')
-plt.legend()
+# Function to generate projectile motion
+def projectile_motion(v0, theta_deg, h=0, dt=0.01):
+    theta = np.radians(theta_deg)
+    vx = v0 * np.cos(theta)
+    vy = v0 * np.sin(theta)
+
+    x, y = [0], [h]
+    t = 0
+    while y[-1] &gt;= 0:
+        t += dt
+        x.append(vx * t)
+        y.append(h + vy * t - 0.5 * g * t**2)
+    return x, y
+
+# -------- Plot (a): Varying Initial Velocity, θ = 45° --------
+v0_list = [30, 40, 50]
+theta_fixed = 45
+
+plt.figure(figsize=(10, 5))
+for v0 in v0_list:
+    x, y = projectile_motion(v0, theta_fixed)
+    plt.plot(x, y, label=f'$v_0$ = {v0} m/s')
+
+plt.title('(a) Varying Initial Velocity at $\\theta$ = 45°')
+plt.xlabel('Range (m)')
+plt.ylabel('Height (m)')
 plt.grid(True)
+plt.legend()
+plt.axis('equal')
+plt.show()
+
+# -------- Plot (b): Varying Angle, v0 = 50 m/s --------
+theta_list = [15, 45, 75]
+v0_fixed = 50
+
+plt.figure(figsize=(10, 5))
+for theta in theta_list:
+    x, y = projectile_motion(v0_fixed, theta)
+    plt.plot(x, y, label=f'$\\theta$ = {theta}°')
+
+plt.title('(b) Varying Launch Angle at $v_0$ = 50 m/s')
+plt.xlabel('Range (m)')
+plt.ylabel('Height (m)')
+plt.grid(True)
+plt.legend()
+plt.axis('equal')
 plt.show()
 </code></pre>
-<hr/>
 <h2 id="5-example-calculations"><strong>5. Example Calculations</strong></h2>
 <h3 id="example-1-finding-the-maximum-range"><strong>Example 1: Finding the Maximum Range</strong></h3>
 <p>If <span class="arithmatex">\(v_0 = 20\)</span> m/s and <span class="arithmatex">\(h=0\)</span>,</p>
@@ -258,106 +387,8 @@ plt.show()
 <h3 id="example-2-effect-of-launch-height"><strong>Example 2: Effect of Launch Height</strong></h3>
 <p>If <span class="arithmatex">\(v_0 = 20\)</span> m/s and <span class="arithmatex">\(h=5\)</span> m,</p>
 <p>Using the general range formula, we get:</p>
-<p>$$ R \approx 45.2 \text{ m} $$
-<img alt="alt text" src="../image-7.png"/></p>
-<hr/>
-<h1 id="example-6-limitations-and-extensions"><strong>Example 6: Limitations and Extensions</strong></h1>
-<h3 id="1-air-resistance"><strong>1. Air Resistance</strong></h3>
-<p>Real-world projectiles experience <strong>drag force</strong>, which opposes motion and is proportional to velocity.</p>
-<p>The equation of motion with air resistance is:</p>
-<div class="arithmatex">\[ 
-F_{\text{drag}} = - k v^2 
-\]</div>
-<p>where <span class="arithmatex">\( k \)</span> is the drag coefficient. This modifies the projectile’s trajectory and reduces the range.</p>
-<h3 id="2-wind-effects"><strong>2. Wind Effects</strong></h3>
-<ul>
-<li><strong>Tailwind</strong> increases the range.</li>
-<li><strong>Headwind</strong> reduces the range.</li>
-<li><strong>Crosswinds</strong> alter the projectile’s horizontal trajectory.</li>
-</ul>
-<h3 id="3-uneven-terrain"><strong>3. Uneven Terrain</strong></h3>
-<ul>
-<li>If a projectile lands on a <strong>slope or rough ground</strong>, the impact location will differ from the idealized case.</li>
-<li>This requires <strong>numerical methods</strong> for better predictions.</li>
-</ul>
-<h3 id="numerical-approach"><strong>Numerical Approach</strong></h3>
-<p>Instead of using analytical equations, we can solve the motion equations numerically:
-- <strong>Euler’s method</strong> or <strong>Runge-Kutta methods</strong> can approximate the path.
-- Computational tools help visualize how drag, wind, and terrain impact motion.</p>
-<h3 id="next-steps"><strong>Next Steps</strong></h3>
-<ul>
-<li>Implement a <strong>Python simulation</strong> to model projectile motion under real-world conditions.</li>
-</ul>
-<p><img alt="alt text" src="../image-8.png"/></p>
-<h1 id="projectile-motion-simulation-with-air-resistance">Projectile Motion Simulation with Air Resistance</h1>
-<p>This project simulates projectile motion with air resistance using Python and NumPy.<br/>
-The code was executed in <strong>Google Colab</strong>, and the generated image is included below.</p>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
-
-# Function to simulate projectile motion with air resistance
-def projectile_motion(v0, theta, h=0, wind=0, k=0.1, g=9.81, t_max=10, dt=0.01):
-    theta_rad = np.radians(theta)
-    v0x = v0 * np.cos(theta_rad) + wind  # Initial horizontal velocity, including wind effect
-    v0y = v0 * np.sin(theta_rad)         # Initial vertical velocity
-
-    # Initial conditions
-    x, y = 0, h
-    vx, vy = v0x, v0y
-
-    # Lists to store the trajectory
-    x_vals, y_vals = [x], [y]
-
-    t = 0
-    while y &gt;= 0 and t &lt; t_max:  # Stop if projectile hits the ground
-        # Calculate air resistance forces
-        fx = -k * vx
-        fy = -k * vy
-
-        # Update velocities
-        ax = fx  # No horizontal acceleration due to gravity (only air resistance)
-        ay = -g + fy  # Vertical acceleration due to gravity and air resistance
-
-        vx += ax * dt
-        vy += ay * dt
-
-        # Update positions
-        x += vx * dt
-        y += vy * dt
-
-        # Store the current position
-        x_vals.append(x)
-        y_vals.append(y)
-
-        t += dt
-
-    return np.array(x_vals), np.array(y_vals)
-
-# Parameters
-v0 = 50  # Initial velocity (m/s)
-theta = 45  # Launch angle (degrees)
-h = 0  # Initial height (m)
-wind = 5  # Wind speed (m/s), positive for tailwind
-k = 0.05  # Air resistance coefficient
-t_max = 15  # Max time for simulation
-
-# Simulate projectile motion with air resistance and wind
-x_vals, y_vals = projectile_motion(v0, theta, h, wind, k, t_max)
-
-# Plotting
-plt.figure(figsize=(10, 6))
-plt.plot(x_vals, y_vals, label="Projectile Path with Wind and Air Resistance", color='b')
-plt.title(f"Projectile Motion with Air Resistance and Wind\nInitial Velocity: {v0} m/s, Angle: {theta}°", fontsize=14)
-plt.xlabel("Horizontal Distance (m)", fontsize=12)
-plt.ylabel("Vertical Distance (m)", fontsize=12)
-plt.grid(True)
-plt.legend()
-plt.xlim(0, max(x_vals) + 10)
-plt.ylim(0, max(y_vals) + 10)
-
-# Show plot
-plt.show()
-</code></pre>
+<div class="arithmatex">\[ R \approx 45.2 \text{ m} \]</div>
+<p><img alt="alt text" src="../image-17.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
