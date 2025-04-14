@@ -133,8 +133,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Constants
-G = 6.674e-11        # Gravitational constant (m^3 kg^-1 s^-2)
-M = 5.97e24          # Mass of Earth (kg)
+G = 6.674e-11     # Gravitational constant (m^3 kg^-1 s^-2)
+M = 5.97e24       # Mass of Earth (kg)
 
 # Generate orbital radii (from 10,000 km to 500,000 km)
 radii = np.linspace(1e7, 5e8, 200)  # in meters
@@ -144,10 +144,11 @@ T_squared = (4 * np.pi**2 / (G * M)) * radii**3
 
 # Plot T² vs r³
 plt.figure(figsize=(8, 5))
-plt.plot(radii**3, T_squared, label="Kepler's Third Law: $T^2 \\propto r^3$", color="royalblue")
-plt.xlabel("$r^3$ (m³)")
-plt.ylabel("$T^2$ (s²)")
-plt.title("📈 Verifying Kepler's Third Law")
+plt.plot(radii**3, T_squared, label=r"Kepler's Third Law: $T^2 \propto r^3$", color="royalblue")
+
+plt.xlabel(r"$r^3$ (m³)")
+plt.ylabel(r"$T^2$ (s²)")
+plt.title("Verifying Kepler's Third Law")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
