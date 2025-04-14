@@ -152,22 +152,48 @@ plt.show()
 **Figure 3: Phase space plot depicting system behavior.**
 ## 1. Simple Pendulum
 
-![alt text](image-555.png)
+**Equation of Motion:**
+
+$$
+\frac{d^2 \theta}{dt^2} + \frac{g}{L} \sin(\theta) = 0
+$$
+
+![alt text](image-2.png)
+
 
 ## 2. Damped Pendulum
 
-![alt text](image-666.png)
+$$
+\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = 0 
+$$
+
+![alt text](image-18.png)
 
 ## 3. Forced Pendulum
 
-![alt text](image-777.png)
+$$
+\frac{d^2\theta}{dt^2} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+$$
+
+![alt text](image-3.png)
 
 ## 4. Forced Damped Pendulum
 
-![alt text](image-888.png)
+$$
+\frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin(\theta) = A \cos(\omega t)
+$$
+
+
+![alt text](image-4.png)
 
 ## 5. Chaotic/Resonant Pendulum
-![alt text](image-101.png)
+
+$$
+\frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin(\theta) = A \cos(\omega t)
+$$
+
+
+![alt text](image-5.png)
 
 ---
 
