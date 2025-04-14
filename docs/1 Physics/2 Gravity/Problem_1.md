@@ -128,6 +128,7 @@ This confirms the real Moon’s period! 🌙
 ![alt text](image.png)
 
 ```python
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -151,4 +152,5 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
 ```
