@@ -71,45 +71,56 @@ For a projectile launched from height $h$, initial speed $v_0$, and angle $\thet
 
 
 - **Horizontal displacement**:
+- 
   $$
   x(t) = v_0 \cos(\theta) \cdot t
   $$
 
 - **Vertical displacement**:
+- 
   $$
   y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
   $$
 
 - **Horizontal velocity**:
+- 
   $$
   v_x = v_0 \cos(\theta)
   $$
 
 - **Vertical velocity**:
+- 
   $$
   v_y(t) = v_0 \sin(\theta) - g t
   $$
 
 - **Speed at time \( t \)**:
+- 
   $$
   v(t) = \sqrt{v_x^2 + v_y(t)^2}
   $$
 
 Where:
+
 - $g$ is the acceleration due to gravity (typically $9.81 \, \text{m/s}^2$),
+  
 - $t$ is the time elapsed,
+  
 - $x(t)$ and $y(t)$ are the positions at time $t$,
+  
 - $v_x$, $v_y(t)$ are the velocity components.
 
 
 
 
 - Horizontal position:
+  
   $$
   x(t) = v_0 \cos(\theta) \cdot t
   $$
 
 - Vertical position:
+  
   $$
   y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
   $$
@@ -123,22 +134,26 @@ We want to find the total time \( t \) the projectile stays in the air.
 Set the vertical position \( y(t) = 0 \) to find when the projectile returns to ground level.
 
 From the kinematic equation:
+
 $$
 y(t) = h + v_0 \sin(\theta)t - \frac{1}{2}gt^2
 $$
 
 Set \( y(t) = 0 \):
+
 $$
 0 = h + v_0 \sin(\theta)t - \frac{1}{2}gt^2
 $$
 
 This is a quadratic equation in \( t \):
+
 $$
 \frac{1}{2}gt^2 - v_0 \sin(\theta)t - h = 0
 $$
 
 
 Solve using the quadratic formula:
+
 $$
 t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh}}{g}
 $$
