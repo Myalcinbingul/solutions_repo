@@ -226,77 +226,73 @@
 <hr/>
 <h2 id="2-kinematic-equations">2. Kinematic Equations</h2>
 <p>For a projectile launched from height <span class="arithmatex">\(h\)</span>, initial speed <span class="arithmatex">\(v_0\)</span>, and angle <span class="arithmatex">\(\theta\)</span>, the motion can be described by:</p>
-<ul>
-<li>
-<p><strong>Horizontal displacement</strong>:
-  $$
+<h2 id="-horizontal-displacement">- <strong>Horizontal displacement</strong>:</h2>
+<p>$$
   x(t) = v_0 \cos(\theta) \cdot t
   $$</p>
-</li>
-<li>
-<p><strong>Vertical displacement</strong>:
-  $$
+<h2 id="-vertical-displacement">- <strong>Vertical displacement</strong>:</h2>
+<p>$$
   y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
   $$</p>
-</li>
-<li>
-<p><strong>Horizontal velocity</strong>:
-  $$
+<h2 id="-horizontal-velocity">- <strong>Horizontal velocity</strong>:</h2>
+<p>$$
   v_x = v_0 \cos(\theta)
   $$</p>
-</li>
-<li>
-<p><strong>Vertical velocity</strong>:
-  $$
+<h2 id="-vertical-velocity">- <strong>Vertical velocity</strong>:</h2>
+<p>$$
   v_y(t) = v_0 \sin(\theta) - g t
   $$</p>
-</li>
-<li>
-<p><strong>Speed at time <span class="arithmatex">\( t \)</span></strong>:
-  $$
+<h2 id="-speed-at-time-t">- <strong>Speed at time <span class="arithmatex">\( t \)</span></strong>:</h2>
+<p>$$
   v(t) = \sqrt{v_x^2 + v_y(t)^2}
   $$</p>
-</li>
-</ul>
-<p>Where:
-- <span class="arithmatex">\(g\)</span> is the acceleration due to gravity (typically <span class="arithmatex">\(9.81 \, \text{m/s}^2\)</span>),
-- <span class="arithmatex">\(t\)</span> is the time elapsed,
-- <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(y(t)\)</span> are the positions at time <span class="arithmatex">\(t\)</span>,
-- <span class="arithmatex">\(v_x\)</span>, <span class="arithmatex">\(v_y(t)\)</span> are the velocity components.</p>
+<p>Where:</p>
 <ul>
 <li>
-<p>Horizontal position:
-  $$
-  x(t) = v_0 \cos(\theta) \cdot t
-  $$</p>
+<p><span class="arithmatex">\(g\)</span> is the acceleration due to gravity (typically <span class="arithmatex">\(9.81 \, \text{m/s}^2\)</span>),</p>
 </li>
 <li>
-<p>Vertical position:
-  $$
-  y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
-  $$</p>
+<p><span class="arithmatex">\(t\)</span> is the time elapsed,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(y(t)\)</span> are the positions at time <span class="arithmatex">\(t\)</span>,</p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_x\)</span>, <span class="arithmatex">\(v_y(t)\)</span> are the velocity components.</p>
+</li>
+<li>
+<p>Horizontal position:</p>
 </li>
 </ul>
+<p>$$
+  x(t) = v_0 \cos(\theta) \cdot t
+  $$</p>
+<ul>
+<li>Vertical position:</li>
+</ul>
+<p>$$
+  y(t) = h + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
+  $$</p>
 <hr/>
 <h2 id="3-time-of-flight">⏱ 3. Time of Flight</h2>
 <p>We want to find the total time <span class="arithmatex">\( t \)</span> the projectile stays in the air.</p>
 <p>Set the vertical position <span class="arithmatex">\( y(t) = 0 \)</span> to find when the projectile returns to ground level.</p>
-<p>From the kinematic equation:
-$$
+<p>From the kinematic equation:</p>
+<div class="arithmatex">\[
 y(t) = h + v_0 \sin(\theta)t - \frac{1}{2}gt^2
-$$</p>
-<p>Set <span class="arithmatex">\( y(t) = 0 \)</span>:
-$$
+\]</div>
+<p>Set <span class="arithmatex">\( y(t) = 0 \)</span>:</p>
+<div class="arithmatex">\[
 0 = h + v_0 \sin(\theta)t - \frac{1}{2}gt^2
-$$</p>
-<p>This is a quadratic equation in <span class="arithmatex">\( t \)</span>:
-$$
+\]</div>
+<p>This is a quadratic equation in <span class="arithmatex">\( t \)</span>:</p>
+<div class="arithmatex">\[
 \frac{1}{2}gt^2 - v_0 \sin(\theta)t - h = 0
-$$</p>
-<p>Solve using the quadratic formula:
-$$
+\]</div>
+<p>Solve using the quadratic formula:</p>
+<div class="arithmatex">\[
 t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh}}{g}
-$$</p>
+\]</div>
 <p><strong>Note:</strong> We discard the negative root since time cannot be negative.</p>
 <hr/>
 <h2 id="4-range-of-the-projectile">4. Range of the Projectile</h2>
