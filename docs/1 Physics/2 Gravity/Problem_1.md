@@ -212,3 +212,5 @@ This document has:
 - Investigate relativistic corrections in strong gravitational fields
 
 This analysis provides a solid foundation for modeling orbits in both classical and more advanced astrophysical contexts.
+
+[Open in Google Colab](https://colab.research.google.com/drive/1RmnfrKEtL2qNTCBlQ-s-TaelBwUYo7F9?usp=sharing)
