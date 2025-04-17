@@ -219,4 +219,4 @@ $$
 ## 6. Conclusion
 This study demonstrates the transition from simple periodic motion to chaotic behavior in the forced damped pendulum. The combination of theoretical analysis and numerical simulation provides a deep insight into the system's behavior under different conditions.
 
-[Open in Google Colab](https://colab.research.google.com/drive/1qWY-0tRAaNqDoGkIPwVe10uU-DeyS-Uq#scrollTo=4gMHXg1svuVu)
+[Open in Google Colab](https://colab.research.google.com/drive/16_UYc1aIFMZMJ6_X2o9ZaIdBj05Vr-xj?usp=sharing)

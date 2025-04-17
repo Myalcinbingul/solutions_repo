@@ -257,3 +257,5 @@ Using the general range formula, we get:
 $$ R \approx 45.2 \text{ m} $$
 
 ![alt text](image-17.png)
+
+[Open in Google Colab](https://colab.research.google.com/drive/1elZ2xLhNI2pmZLni9gtiF3DZPibluV10?usp=sharing)
