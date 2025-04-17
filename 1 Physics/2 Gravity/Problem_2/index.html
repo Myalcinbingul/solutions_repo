@@ -172,6 +172,162 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="escape-and-cosmic-velocities">🚀 Escape and Cosmic Velocities</h1>
+<p>This repository presents a detailed study of escape and cosmic velocities, prepared for <strong>[Course Name]</strong> at <strong>[University Name]</strong>. It includes definitions, derivations, visualizations, and significance of these velocities for <strong>Earth</strong>, <strong>Mars</strong>, and <strong>Jupiter</strong>.</p>
+<hr/>
+<h2 id="problem-statement">📌 Problem Statement</h2>
+<p>This project aims to:</p>
+<ul>
+<li>Define the <strong>first</strong>, <strong>second</strong>, and <strong>third cosmic velocities</strong> and explain their physical significance.</li>
+<li>Derive the mathematical formulas and analyze influencing parameters.</li>
+<li>Calculate and visualize these velocities for three planets.</li>
+<li>Discuss their relevance in satellite launches, interplanetary missions, and interstellar travel.</li>
+</ul>
+<hr/>
+<h2 id="definitions-and-formulas">📘 Definitions and Formulas</h2>
+<h3 id="definitions">🔹 Definitions</h3>
+<ul>
+<li><strong>Escape Velocity</strong>: The minimum speed required to escape a celestial body's gravity without additional propulsion.</li>
+<li><strong>First Cosmic Velocity</strong>: The velocity required to maintain a stable low circular orbit near the surface.</li>
+<li><strong>Second Cosmic Velocity</strong>: The speed needed to completely escape a planet’s gravity.</li>
+<li><strong>Third Cosmic Velocity</strong>: The velocity required to leave the Solar System from a planet’s orbit.</li>
+</ul>
+<hr/>
+<h3 id="useful-formulas">🔹 Useful Formulas</h3>
+<p><strong>Gravitational Constant:</strong></p>
+<div class="arithmatex">\[ G = 6.67430 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2} \]</div>
+<p><strong>General Parameters:</strong></p>
+<ul>
+<li><span class="arithmatex">\( M \)</span>: Mass of celestial body (kg)  </li>
+<li><span class="arithmatex">\( r \)</span>: Radius of celestial body (m)</li>
+</ul>
+<p><strong>First Cosmic Velocity (orbital velocity):</strong></p>
+<div class="arithmatex">\[ v_1 = \sqrt{\frac{G M}{r}} \]</div>
+<p><strong>Second Cosmic Velocity (escape velocity):</strong></p>
+<div class="arithmatex">\[ v_2 = \sqrt{\frac{2 G M}{r}} \quad \text{so} \quad v_2 = \sqrt{2} \cdot v_1 \]</div>
+<p><strong>Third Cosmic Velocity (escape from Solar System):</strong></p>
+<div class="arithmatex">\[
+v_3 \approx \sqrt{v_{\text{esc,Sun}}^2 + v_2^2}
+\]</div>
+<p>where:</p>
+<div class="arithmatex">\[
+v_{\text{esc,Sun}} = \sqrt{\frac{2 G M_{\text{Sun}}}{r_{\text{orbit}}}}
+\]</div>
+<hr/>
+<h2 id="mathematical-derivations">🧠 Mathematical Derivations</h2>
+<h3 id="first-cosmic-velocity">🔸 First Cosmic Velocity</h3>
+<p>From centripetal force balance:</p>
+<div class="arithmatex">\[
+\frac{G M m}{r^2} = \frac{m v_1^2}{r}
+\quad \Rightarrow \quad
+v_1 = \sqrt{\frac{G M}{r}}
+\]</div>
+<hr/>
+<h3 id="second-cosmic-velocity">🔸 Second Cosmic Velocity</h3>
+<p>From conservation of energy:</p>
+<div class="arithmatex">\[
+\frac{1}{2} m v_2^2 = \frac{G M m}{r}
+\quad \Rightarrow \quad
+v_2 = \sqrt{\frac{2 G M}{r}}
+\]</div>
+<hr/>
+<h3 id="third-cosmic-velocity">🔸 Third Cosmic Velocity</h3>
+<p>Combining the escape velocities from both the planet and the Sun:</p>
+<div class="arithmatex">\[
+v_3 \approx \sqrt{
+\left( \sqrt{ \frac{2 G M_{\text{Sun}}}{r_{\text{orbit}}} } \right)^2 + v_2^2
+}
+\]</div>
+<hr/>
+<h2 id="parameters-for-celestial-bodies">🌍 Parameters for Celestial Bodies</h2>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>Mass (kg)</th>
+<th>Radius (m)</th>
+<th>Orbital Radius (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td><span class="arithmatex">\(5.972 \times 10^{24}\)</span></td>
+<td><span class="arithmatex">\(6.371 \times 10^6\)</span></td>
+<td><span class="arithmatex">\(1.496 \times 10^{11}\)</span></td>
+</tr>
+<tr>
+<td>Mars</td>
+<td><span class="arithmatex">\(6.417 \times 10^{23}\)</span></td>
+<td><span class="arithmatex">\(3.390 \times 10^6\)</span></td>
+<td><span class="arithmatex">\(2.279 \times 10^{11}\)</span></td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td><span class="arithmatex">\(1.899 \times 10^{27}\)</span></td>
+<td><span class="arithmatex">\(6.991 \times 10^7\)</span></td>
+<td><span class="arithmatex">\(7.785 \times 10^{11}\)</span></td>
+</tr>
+<tr>
+<td>Sun</td>
+<td><span class="arithmatex">\(1.989 \times 10^{30}\)</span></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="python-implementation-for-google-colab">🧪 Python Implementation (for Google Colab)</h2>
+<h2 id="_1"><img alt="alt text" src="../image-1.png"/></h2>
+<h2 id="results">📊 Results</h2>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th><span class="arithmatex">\(v_1\)</span> (km/s)</th>
+<th><span class="arithmatex">\(v_2\)</span> (km/s)</th>
+<th><span class="arithmatex">\(v_3\)</span> (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td>~7.91</td>
+<td>~11.19</td>
+<td>~42.14</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>~3.55</td>
+<td>~5.03</td>
+<td>~22.96</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>~18.55</td>
+<td>~26.24</td>
+<td>~29.78</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="importance-in-space-exploration">🚀 Importance in Space Exploration</h2>
+<h3 id="satellite-launches">🛰️ Satellite Launches</h3>
+<ul>
+<li><strong>First cosmic velocity</strong> is used to launch satellites into low Earth orbit.</li>
+<li>Example: The ISS orbits at ~7.66 km/s, close to Earth’s <span class="arithmatex">\(v_1\)</span>.</li>
+</ul>
+<h3 id="planetary-missions">🪐 Planetary Missions</h3>
+<ul>
+<li><strong>Second cosmic velocity</strong> defines the required speed to send spacecraft from a planet.</li>
+<li>Example: NASA's Perseverance mission had to exceed Earth’s <span class="arithmatex">\(v_2 = 11.19\ \text{km/s}\)</span>.</li>
+</ul>
+<h3 id="interstellar-travel">🌀 Interstellar Travel</h3>
+<ul>
+<li><strong>Third cosmic velocity</strong> is crucial for missions beyond the Solar System.</li>
+<li>Example: Voyager 1 surpassed Earth’s <span class="arithmatex">\(v_3 \approx 42.14\ \text{km/s}\)</span> using gravity assists.</li>
+</ul>
+<p><a href="https://colab.research.google.com/drive/1IO4Mrd2AMHcfg7q5VWXzSpWjNxdjh7bd?usp=sharing">Open in Google Colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
