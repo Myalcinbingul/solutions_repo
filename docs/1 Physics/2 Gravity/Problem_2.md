@@ -1,11 +1,12 @@
 # Problem 2
-# 🚀 Escape and Cosmic Velocities
+
+##  Escape and Cosmic Velocities
 
 This repository presents a detailed study of escape and cosmic velocities, prepared for **[Course Name]** at **[University Name]**. It includes definitions, derivations, visualizations, and significance of these velocities for **Earth**, **Mars**, and **Jupiter**.
 
 ---
 
-## 📌 Problem Statement
+##  Problem Statement
 
 This project aims to:
 
@@ -16,7 +17,7 @@ This project aims to:
 
 ---
 
-## 📘 Definitions and Formulas
+##  Definitions and Formulas
 
 ### 🔹 Definitions
 
@@ -60,7 +61,7 @@ $$
 
 ---
 
-## 🧠 Mathematical Derivations
+##  Mathematical Derivations
 
 ### 🔸 First Cosmic Velocity
 
@@ -98,7 +99,7 @@ $$
 
 ---
 
-## 🌍 Parameters for Celestial Bodies
+##  Parameters for Celestial Bodies
 
 | Body     | Mass (kg)                    | Radius (m)                 | Orbital Radius (m)           |
 |----------|------------------------------|-----------------------------|-------------------------------|
@@ -109,7 +110,7 @@ $$
 
 ---
 
-## 🧪 Python Implementation (for Google Colab)
+##  Python Implementation (for Google Colab)
 
 ![alt text](image-1.png)
 ---
@@ -124,22 +125,79 @@ $$
 
 ---
 
-## 🚀 Importance in Space Exploration
+##  Importance in Space Exploration
 
-### 🛰️ Satellite Launches
+###  Satellite Launches
 
 - **First cosmic velocity** is used to launch satellites into low Earth orbit.
 - Example: The ISS orbits at ~7.66 km/s, close to Earth’s $v_1$.
 
-### 🪐 Planetary Missions
+###  Planetary Missions
 
 - **Second cosmic velocity** defines the required speed to send spacecraft from a planet.
 - Example: NASA's Perseverance mission had to exceed Earth’s $v_2 = 11.19\ \text{km/s}$.
 
-### 🌀 Interstellar Travel
+###  Interstellar Travel
 
 - **Third cosmic velocity** is crucial for missions beyond the Solar System.
 - Example: Voyager 1 surpassed Earth’s $v_3 \approx 42.14\ \text{km/s}$ using gravity assists.
 
+
+##  Relating Cosmic Velocities to Historical and Planned Space Missions
+
+Space missions rely heavily on the concept of **cosmic velocities** to achieve orbit, reach other planets, or even escape the solar system. These velocities define the minimum speed needed for different types of motion in space:
+
+
+- **First Cosmic Velocity** – To achieve orbit (LEO)
+- **Second Cosmic Velocity** – To escape Earth’s gravity
+- **Third Cosmic Velocity** – To escape the Sun’s gravity from Earth’s orbit
+
+---
+
+
+##  Key Equations
+
+Let:
+
+$$
+\begin{align*}
+v_1 &\text{ — first cosmic velocity (orbital speed)} \\
+v_2 &\text{ — second cosmic velocity (escape from planet)} \\
+v_3 &\text{ — third cosmic velocity (escape solar system)}
+\end{align*}
+$$
+
+---
+
+The formulas are:
+
+$$
+v_1 = \sqrt{\frac{GM}{R}}
+$$
+
+$$
+v_2 = \sqrt{2} \cdot v_1
+$$
+
+$$
+v_3 = \sqrt{2GM_\odot \left( \frac{1}{R_{\text{Earth orbit}}} \right)}
+$$
+
+---
+
+Where:
+
+$$
+\begin{align*}
+G &\text{ — gravitational constant} \\
+M &\text{ — mass of the planet (Earth, Mars, etc.)} \\
+R &\text{ — radius from the planet's center} \\
+M_\odot &\text{ — mass of the Sun}
+\end{align*}
+$$
+
+![alt text](image-5.png)
+
+---
 
 [Open in Google Colab](https://colab.research.google.com/drive/1IO4Mrd2AMHcfg7q5VWXzSpWjNxdjh7bd?usp=sharing)
