@@ -19,7 +19,7 @@ This project aims to:
 
 ##  Definitions and Formulas
 
-### 🔹 Definitions
+###  Definitions
 
 - **Escape Velocity**: The minimum speed required to escape a celestial body's gravity without additional propulsion.
 - **First Cosmic Velocity**: The velocity required to maintain a stable low circular orbit near the surface.
@@ -28,7 +28,7 @@ This project aims to:
 
 ---
 
-### 🔹 Useful Formulas
+###  Useful Formulas
 
 **Gravitational Constant:**
 
@@ -63,7 +63,7 @@ $$
 
 ##  Mathematical Derivations
 
-### 🔸 First Cosmic Velocity
+###  First Cosmic Velocity
 
 From centripetal force balance:
 
@@ -75,7 +75,7 @@ $$
 
 ---
 
-### 🔸 Second Cosmic Velocity
+###  Second Cosmic Velocity
 
 From conservation of energy:
 
@@ -87,7 +87,7 @@ $$
 
 ---
 
-### 🔸 Third Cosmic Velocity
+###  Third Cosmic Velocity
 
 Combining the escape velocities from both the planet and the Sun:
 
