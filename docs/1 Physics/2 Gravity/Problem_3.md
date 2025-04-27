@@ -61,10 +61,12 @@ The trajectory of a payload depends on its specific mechanical energy $\varepsil
 
 $$\varepsilon = \frac{v^2}{2} - \frac{GM}{r}$$
 
-<div style="display: flex; gap: 20px;">
-    <img src=" image.png " width="400" alt="Case 1: Circular Trajectories" />
-    <img src=" image-4.png " width="400" alt="Case 2: Hyperbolic Trajectories" />
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="image.png" width="49%" />
+  <img src="image-4.png" width="49%" />
 </div>
+
 
 
 This energy determines the type of conic section the trajectory will follow:
@@ -157,10 +159,13 @@ The simulation demonstrates several trajectory types based on the initial veloci
 * CASE 2: Extended view showing the full shapes of elliptical orbits at different velocities*
 
 
-<div style="display: flex; gap: 20px;">
-    <img src=" image-6.png " width="400" alt="Case 1: Circular Trajectories" />
-    <img src=" image-7.png " width="400" alt="Case 2: Hyperbolic Trajectories" />
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="image-6.png" width="49%" />
+  <img src="image-7.png" width="49%" />
 </div>
+
+
 
 ## Discussion of Applications
 
