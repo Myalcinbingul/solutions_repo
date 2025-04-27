@@ -158,8 +158,8 @@ The simulation demonstrates several trajectory types based on the initial veloci
 
 
 <div style="display: flex; gap: 10px;">
-    <img src="image-8.png" width="300" />
-    <img src="image-9.png" width="300" />
+    <img src="image.png" width="300" />
+    <img src="image-4.png" width="300" />
 </div>
 
 
