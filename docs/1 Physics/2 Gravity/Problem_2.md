@@ -2,7 +2,7 @@
 
 ##  Escape and Cosmic Velocities
 
-This repository presents a detailed study of escape and cosmic velocities, prepared for **[Course Name]** at **[University Name]**. It includes definitions, derivations, visualizations, and significance of these velocities for **Earth**, **Mars**, and **Jupiter**.
+
 
 ---
 
