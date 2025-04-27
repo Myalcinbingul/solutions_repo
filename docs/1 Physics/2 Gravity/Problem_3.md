@@ -231,6 +231,10 @@ For practical applications, additional factors would need to be considered, incl
 
 Understanding these orbital dynamics principles is essential for mission planning in all areas of space exploration, from satellite deployment to human spaceflight to interplanetary missions.
 
+------------
+
+[Open in Google Colab](https://colab.research.google.com/drive/14r_2HuwKZ0kPmcRLBgSBMw9AxhpQDNrx?usp=sharing)
+
 ## References
 
 1. Vallado, D. A. (2013). *Fundamentals of Astrodynamics and Applications*. Microcosm Press.
@@ -238,3 +242,4 @@ Understanding these orbital dynamics principles is essential for mission plannin
 3. Bate, R. R., Mueller, D. D., & White, J. E. (1971). *Fundamentals of Astrodynamics*. Dover Publications.
 4. NASA. (2011). *NASA's Guide to Orbital Mechanics*. NASA Technical Reports.
 5. Wertz, J. R. (2012). *Mission Geometry; Orbit and Constellation Design and Management*. Microcosm Press.
+   
