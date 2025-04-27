@@ -148,10 +148,10 @@ The simulation demonstrates several trajectory types based on the initial veloci
 5. **Hyperbolic Trajectories**: With velocity greater than escape velocity (>11.0 km/s), the payload follows a hyperbolic path and escapes Earth's gravity with excess kinetic energy.
 
 
-* CASE 1: Multiple trajectories from 800 km above Earth's surface with different initial velocities (5-13 km/s)*
+* Case 1:  Multiple trajectories from 800 km above Earth's surface with different initial velocities (5-13 km/s)*
 
 
-* CASE 2: Extended view showing the full shapes of elliptical orbits at different velocities*
+* Case 2: Extended view showing the full shapes of elliptical orbits at different velocities*
 
 ![alt text](image-8.png)
 
