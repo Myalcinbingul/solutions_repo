@@ -219,6 +219,10 @@
 <h3 id="types-of-trajectories">Types of Trajectories</h3>
 <p>The trajectory of a payload depends on its specific mechanical energy <span class="arithmatex">\(\varepsilon\)</span>, which is the sum of kinetic and potential energy per unit mass:</p>
 <div class="arithmatex">\[\varepsilon = \frac{v^2}{2} - \frac{GM}{r}\]</div>
+<div style="display: flex; gap: 10px;">
+<img src="image-11.png" width="300"/>
+<img src="image-12.png" width="300"/>
+</div>
 <p>This energy determines the type of conic section the trajectory will follow:</p>
 <ol>
 <li><strong>Circular orbit</strong> (<span class="arithmatex">\(\varepsilon = -\frac{GM}{2r}\)</span>): The payload follows a perfect circle around Earth.</li>
@@ -226,7 +230,7 @@
 <li><strong>Parabolic trajectory</strong> (<span class="arithmatex">\(\varepsilon = 0\)</span>): The payload follows a parabola and has exactly escape velocity.</li>
 <li><strong>Hyperbolic trajectory</strong> (<span class="arithmatex">\(\varepsilon &gt; 0\)</span>): The payload has more than escape velocity and will never return.</li>
 </ol>
-<p><img alt="alt text" src="../image-8.png"/></p>
+<p><img alt="alt text" src="../image-13.png"/></p>
 <h3 id="escape-velocity">Escape Velocity</h3>
 <p>The escape velocity is the minimum speed needed for an object to escape Earth's gravitational field. At a distance <span class="arithmatex">\(r\)</span> from the center of Earth, the escape velocity is:</p>
 <div class="arithmatex">\[v_{esc} = \sqrt{\frac{2GM}{r}}\]</div>
@@ -255,231 +259,6 @@ $$\frac{d^2z}{dt^2} = -\frac{GM}{r^3}z\]</div>
 <h2 id="numerical-analysis-and-simulation">Numerical Analysis and Simulation</h2>
 <h3 id="python-implementation">Python Implementation</h3>
 <p>Below is a Python implementation to simulate and visualize trajectories of a payload under Earth's gravitational influence:</p>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import solve_ivp
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.gridspec as gridspec
-
-# Constants
-G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
-M = 5.972e24     # Earth's mass (kg)
-R = 6371000      # Earth's radius (m)
-
-def gravitational_acceleration(t, state):
-    """Calculate acceleration due to gravity."""
-    x, y, z, vx, vy, vz = state
-    r = np.sqrt(x**2 + y**2 + z**2)
-
-    # Check if object is inside Earth (simplified model)
-    if r &lt; R:
-        return [vx, vy, vz, 0, 0, 0]  # Stop simulation if inside Earth
-
-    # Gravitational acceleration components
-    ax = -G * M * x / r**3
-    ay = -G * M * y / r**3
-    az = -G * M * z / r**3
-
-    return [vx, vy, vz, ax, ay, az]
-
-def simulate_trajectory(initial_position, initial_velocity, t_span, t_eval):
-    """Simulate trajectory given initial conditions."""
-    initial_state = [*initial_position, *initial_velocity]
-
-    # Solve the differential equations
-    solution = solve_ivp(
-        gravitational_acceleration,
-        t_span,
-        initial_state,
-        t_eval=t_eval,
-        method='RK45',
-        rtol=1e-10,
-        atol=1e-10
-    )
-
-    return solution
-
-def classify_orbit(position, velocity):
-    """Classify orbit based on specific energy."""
-    r = np.linalg.norm(position)
-    v = np.linalg.norm(velocity)
-
-    # Specific energy
-    energy = 0.5 * v**2 - G * M / r
-
-    if abs(energy) &lt; 1e-10:  # Very close to zero
-        return "Parabolic (escape trajectory)"
-    elif energy &lt; 0:
-        # Calculate eccentricity for elliptical orbits
-        h = np.cross(position, velocity)  # Angular momentum vector
-        h_mag = np.linalg.norm(h)
-        e = np.sqrt(1 + 2 * energy * h_mag**2 / (G * M)**2)
-
-        if abs(e - 0) &lt; 1e-10:  # Very close to zero
-            return f"Circular (e ≈ {e:.8f})"
-        else:
-            return f"Elliptical (e = {e:.4f})"
-    else:
-        return "Hyperbolic (escape trajectory)"
-
-def plot_case1():
-    """
-    Plot Case 1: Multiple trajectories from 800km above Earth surface
-    with different initial velocities (5-13 km/s)
-    """
-    # Create figure
-    plt.figure(figsize=(10, 10))
-
-    # Time settings
-    t_span = (0, 200000)  # 200,000 seconds (about 55.6 hours)
-    times = np.linspace(0, 200000, 1000)
-
-    # Initial position (800 km above Earth's surface, on the right side)
-    altitude = 800000  # 800 km in meters
-    r0 = R + altitude
-    initial_position = [r0, 0, 0]
-
-    # Velocities from 5 km/s to 13 km/s with 1 km/s increment
-    velocities = []
-    for v in range(5, 14):
-        # Convert km/s to m/s and set direction perpendicular to position (orbital insertion)
-        vel = v * 1000  # Convert to m/s
-        velocities.append((vel, f"{v} km/s"))
-
-    # Colors for different trajectories
-    colors = plt.cm.jet(np.linspace(0, 1, len(velocities)))
-
-    # Plot Earth
-    theta = np.linspace(0, 2*np.pi, 100)
-    earth_x = R * np.cos(theta)
-    earth_y = R * np.sin(theta)
-    plt.fill(earth_x, earth_y, color='royalblue', alpha=0.8, label='Earth')
-    plt.plot(earth_x, earth_y, 'k-', linewidth=1)
-
-    # Mark center of Earth
-    plt.plot(0, 0, 'k+', markersize=10, label='Center of Earth')
-
-    # Mark initial position
-    plt.plot([r0], [0], 'ro', markersize=5)
-
-    # Plot each trajectory
-    for i, (vel, label) in enumerate(velocities):
-        # Set velocity perpendicular to position (for orbital insertion)
-        vel_vector = [0, vel, 0]
-
-        # Simulate trajectory
-        sol = simulate_trajectory(initial_position, vel_vector, t_span, times)
-        orbit_type = classify_orbit(np.array(initial_position), np.array(vel_vector))
-
-        # Extract position data
-        x, y = sol.y[0], sol.y[1]
-
-        # Plot trajectory
-        plt.plot(x, y, color=colors[i], label=f"Trajectory {i+1} ({label})")
-
-    # Set equal aspect ratio and grid
-    plt.axis('equal')
-    plt.grid(True, linestyle='--', alpha=0.7)
-
-    # Set labels and title
-    plt.xlabel('x [m]')
-    plt.ylabel('y [m]')
-    plt.title('Trajectories in a Gravitational Field with Fixed Earth')
-
-    # Create legend
-    plt.legend(loc='upper right', fontsize=8)
-
-    # Save figure
-    plt.savefig('earth_trajectories_case1.png', dpi=300, bbox_inches='tight')
-    plt.close()
-
-def plot_case2():
-    """
-    Plot Case 2: Same as Case 1 but with a different scale to see more elliptical trajectories
-    """
-    # Create figure
-    plt.figure(figsize=(10, 10))
-
-    # Time settings
-    t_span = (0, 200000)  # 200,000 seconds
-    times = np.linspace(0, 200000, 1000)
-
-    # Initial position (800 km above Earth's surface, on the right side)
-    altitude = 800000  # 800 km in meters
-    r0 = R + altitude
-    initial_position = [r0, 0, 0]
-
-    # Velocities from 5 km/s to 13 km/s with 1 km/s increment
-    velocities = []
-    for v in range(5, 14):
-        # Convert km/s to m/s and set direction perpendicular to position (orbital insertion)
-        vel = v * 1000  # Convert to m/s
-        velocities.append((vel, f"{v} km/s"))
-
-    # Additional velocities for more variety
-    for v in [5.2, 5.4, 5.6, 5.8]:
-        vel = v * 1000  # Convert to m/s
-        velocities.append((vel, f"{v} km/s"))
-
-    # Sort velocities for consistent coloring
-    velocities.sort(key=lambda x: x[0])
-
-    # Colors for different trajectories
-    colors = plt.cm.jet(np.linspace(0, 1, len(velocities)))
-
-    # Plot Earth
-    theta = np.linspace(0, 2*np.pi, 100)
-    earth_x = R * np.cos(theta)
-    earth_y = R * np.sin(theta)
-    plt.fill(earth_x, earth_y, color='royalblue', alpha=0.8, label='Earth')
-    plt.plot(earth_x, earth_y, 'k-', linewidth=1)
-
-    # Mark center of Earth
-    plt.plot(0, 0, 'k+', markersize=10, label='Center of Earth')
-
-    # Mark initial position
-    plt.plot([r0], [0], 'ro', markersize=5)
-
-    # Plot each trajectory
-    for i, (vel, label) in enumerate(velocities):
-        # Set velocity perpendicular to position (for orbital insertion)
-        vel_vector = [0, vel, 0]
-
-        # Simulate trajectory
-        sol = simulate_trajectory(initial_position, vel_vector, t_span, times)
-        orbit_type = classify_orbit(np.array(initial_position), np.array(vel_vector))
-
-        # Extract position data
-        x, y = sol.y[0], sol.y[1]
-
-        # Plot trajectory
-        plt.plot(x, y, color=colors[i], label=f"Trajectory {i+1} ({label})")
-
-    # Set axis limits to show more of the elliptical orbits
-    plt.xlim(-10*r0, 2*r0)
-    plt.ylim(-5*r0, 5*r0)
-
-    # Set grid
-    plt.grid(True, linestyle='--', alpha=0.7)
-
-    # Set labels and title
-    plt.xlabel('x [m]')
-    plt.ylabel('y [m]')
-    plt.title('Trajectories in a Gravitational Field with Fixed Earth')
-
-    # Create legend
-    plt.legend(loc='upper right', fontsize=8)
-
-    # Save figure
-    plt.savefig('earth_trajectories_case2.png', dpi=300, bbox_inches='tight')
-    plt.close()
-
-# Execute the plotting functions
-if __name__ == "__main__":
-    plot_case1()
-    plot_case2()
-    print("Simulation complete. Plots saved as 'earth_trajectories_case1.png' and 'earth_trajectories_case2.png'")
-</code></pre>
 <h3 id="simulation-cases">Simulation Cases</h3>
 <p>We will analyze two main cases:</p>
 <h4 id="case-1-basic-trajectory-analysis">Case 1: Basic Trajectory Analysis</h4>
@@ -513,11 +292,17 @@ if __name__ == "__main__":
 <li>
 <p><strong>Hyperbolic Trajectories</strong>: With velocity greater than escape velocity (&gt;11.0 km/s), the payload follows a hyperbolic path and escapes Earth's gravity with excess kinetic energy.</p>
 </li>
+<li>
+<p>CASE 1: Multiple trajectories from 800 km above Earth's surface with different initial velocities (5-13 km/s)*</p>
+</li>
+<li>
+<p>CASE 2: Extended view showing the full shapes of elliptical orbits at different velocities*</p>
+</li>
 </ol>
-<p><em>Figure 1: Multiple trajectories from 800 km above Earth's surface with different initial velocities (5-13 km/s)</em></p>
-<p><img alt="alt text" src="../image-6.png"/></p>
-<p><em>Figure 2: Extended view showing the full shapes of elliptical orbits at different velocities</em></p>
-<p><img alt="alt text" src="../image-7.png"/></p>
+<div style="display: flex; gap: 10px;">
+<img src="image-8.png" width="300"/>
+<img src="image-9.png" width="300"/>
+</div>
 <h2 id="discussion-of-applications">Discussion of Applications</h2>
 <h3 id="orbital-insertion">Orbital Insertion</h3>
 <p>To insert a payload into a specific orbit, we need to calculate the required velocity and direction at the release point. This involves:</p>
