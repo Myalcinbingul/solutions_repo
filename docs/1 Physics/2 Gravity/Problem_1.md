@@ -127,13 +127,82 @@ $$
 M = \frac{4 \pi^2 r^3}{G T^2} \approx 5.97 \times 10^{24} \, \text{kg}
 $$
 
-### 5.2 Earth and Mars (Orbiting the Sun)
-
-- Earth:  
-  $T = 3.156 \times 10^7$ s, $r = 1.496 \times 10^{11}$ m
 
 - Mars:  
   $T = 5.94 \times 10^7$ s, $r = 2.279 \times 10^{11}$ m
+
+### Finding the Mass of Earth and the Mass of the Sun Using Kepler's Third Law
+
+## Kepler's Third Law (Newtonian Form)
+
+$$
+T^2 = \frac{4 \pi^2 r^3}{G M}
+$$
+
+Solving for \(M\):
+
+$$
+M = \frac{4 \pi^2 r^3}{G T^2}
+$$
+
+---
+
+# Mass of the Earth
+
+Values:
+
+- Radius of orbit (Earth surface):  
+  $$ r = 6.371 \times 10^6 \, \text{m} $$
+- Orbital period near Earth's surface:  
+  $$ T = 1.5 \times 10^4 \, \text{s} $$
+- Gravitational constant:  
+  $$ G = 6.67430 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2} $$
+
+Substituting into the formula:
+
+$$
+M_{\text{Earth}} = \frac{4 \pi^2 (6.371 \times 10^6)^3}{(6.67430 \times 10^{-11})(1.5 \times 10^4)^2}
+$$
+
+Final Result:
+
+$$
+\boxed{M_{\text{Earth}} \approx 5.97 \times 10^{24} \, \text{kg}}
+$$
+
+---
+
+# Mass of the Sun
+
+Values:
+
+- Radius of Earth's orbit around Sun:  
+  $$ r = 1.496 \times 10^{11} \, \text{m} $$
+- Orbital period of Earth around Sun:  
+  $$ T = 3.156 \times 10^7 \, \text{s} $$
+
+Substituting into the formula:
+
+$$
+M_{\text{Sun}} = \frac{4 \pi^2 (1.496 \times 10^{11})^3}{(6.67430 \times 10^{-11})(3.156 \times 10^7)^2}
+$$
+
+Final Result:
+
+$$
+\boxed{M_{\text{Sun}} \approx 1.989 \times 10^{30} \, \text{kg}}
+$$
+
+---
+
+# Final Summary Table
+
+| Body  | Mass |
+|:----- |:---- |
+| Earth | $5.97 \times 10^{24} \, \text{kg}$ |
+| Sun   | $1.989 \times 10^{30} \, \text{kg}$ |
+| Mars  | $6.39 \times 10^{23} \, \text{kg}$ |
+
 
 Check:
 $$

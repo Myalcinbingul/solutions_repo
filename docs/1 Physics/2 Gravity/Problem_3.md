@@ -62,7 +62,7 @@ The trajectory of a payload depends on its specific mechanical energy $\varepsil
 $$\varepsilon = \frac{v^2}{2} - \frac{GM}{r}$$
 
 
-![alt text](image-9.png)
+![alt text](image.png)
 
 This energy determines the type of conic section the trajectory will follow:
 
@@ -92,8 +92,13 @@ $$\frac{d^2\vec{r}}{dt^2} = -\frac{GM}{r^3}\vec{r}$$
 In Cartesian coordinates, this becomes three coupled second-order differential equations:
 
 $$\frac{d^2x}{dt^2} = -\frac{GM}{r^3}x$$
+
+
 $$\frac{d^2y}{dt^2} = -\frac{GM}{r^3}y$$
+
+
 $$\frac{d^2z}{dt^2} = -\frac{GM}{r^3}z$$
+
 
 where $r = \sqrt{x^2 + y^2 + z^2}$
 
