@@ -109,27 +109,41 @@ The interference pattern inherits symmetry properties from the source arrangemen
 # Examples and Analysis of Interference Patterns
 
 
+## One Source
 
-<p align="center">
-  <img src="one_source_topdown.gif" width="47%">
-  <img src="one_source.gif" width="40%">
-</p>
+<table>
+  <tr>
+    <td><img src="one_source_topdown.gif" alt="Top-down view - one source" width="100%"></td>
+    <td><img src="one_source.gif" alt="3D view - one source" width="100%"></td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="two_sources_topdown.gif" width="47%">
-  <img src="two_sources.gif" width="40%">
-</p>
+## Two Sources
 
-<p align="center">
-  <img src="triangle_sources_topdown.gif" width="47%">
-  <img src="triangle_sources.gif" width="40%">
-</p>
+<table>
+  <tr>
+    <td><img src="two_sources_topdown.gif" alt="Top-down view - two sources" width="100%"></td>
+    <td><img src="two_sources.gif" alt="3D view - two sources" width="100%"></td>
+  </tr>
+</table>
 
+## Triangle Sources
 
-<p align="center">
-  <img src="pentagon_sources_topdown.gif" width="47%">
-  <img src="pentagon_sources.gif" width="40%">
-</p>
+<table>
+  <tr>
+    <td><img src="triangle_sources_topdown.gif" alt="Top-down view - triangle sources" width="100%"></td>
+    <td><img src="triangle_sources.gif" alt="3D view - triangle sources" width="100%"></td>
+  </tr>
+</table>
+
+## Pentagon Sources
+
+<table>
+  <tr>
+    <td><img src="pentagon_sources_topdown.gif" alt="Top-down view - pentagon sources" width="100%"></td>
+    <td><img src="pentagon_sources.gif" alt="3D view - pentagon sources" width="100%"></td>
+  </tr>
+</table>
 
 
 
