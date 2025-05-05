@@ -108,13 +108,12 @@ The interference pattern inherits symmetry properties from the source arrangemen
 
 # Examples and Analysis of Interference Patterns
 
-
 ## One Source
 
 <table>
   <tr>
-    <td><img src="one_source_topdown.gif" alt="Top-down view - one source" width="100%"></td>
-    <td><img src="one_source.gif" alt="3D view - one source" width="100%"></td>
+    <td><img src="/solutions_repo/one_source_topdown.gif" alt="Top-down view - one source" width="100%"></td>
+    <td><img src="/solutions_repo/one_source.gif" alt="3D view - one source" width="100%"></td>
   </tr>
 </table>
 
@@ -122,8 +121,8 @@ The interference pattern inherits symmetry properties from the source arrangemen
 
 <table>
   <tr>
-    <td><img src="two_sources_topdown.gif" alt="Top-down view - two sources" width="100%"></td>
-    <td><img src="two_sources.gif" alt="3D view - two sources" width="100%"></td>
+    <td><img src="/solutions_repo/two_sources_topdown.gif" alt="Top-down view - two sources" width="100%"></td>
+    <td><img src="/solutions_repo/two_sources.gif" alt="3D view - two sources" width="100%"></td>
   </tr>
 </table>
 
@@ -131,8 +130,8 @@ The interference pattern inherits symmetry properties from the source arrangemen
 
 <table>
   <tr>
-    <td><img src=" triangle_sources_topdown.gif " alt="Top-down view - triangle sources" width="100%"></td>
-    <td><img src="triangle_sources.gif" alt="3D view - triangle sources" width="100%"></td>
+    <td><img src="/solutions_repo/triangle_sources_topdown.gif" alt="Top-down view - triangle sources" width="100%"></td>
+    <td><img src="/solutions_repo/triangle_sources.gif" alt="3D view - triangle sources" width="100%"></td>
   </tr>
 </table>
 
@@ -140,8 +139,8 @@ The interference pattern inherits symmetry properties from the source arrangemen
 
 <table>
   <tr>
-    <td><img src="pentagon_sources_topdown.gif" alt="Top-down view - pentagon sources" width="100%"></td>
-    <td><img src="pentagon_sources.gif" alt="3D view - pentagon sources" width="100%"></td>
+    <td><img src="/solutions_repo/pentagon_sources_topdown.gif" alt="Top-down view - pentagon sources" width="100%"></td>
+    <td><img src="/solutions_repo/pentagon_sources.gif" alt="3D view - pentagon sources" width="100%"></td>
   </tr>
 </table>
 
