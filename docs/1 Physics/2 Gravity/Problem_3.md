@@ -202,6 +202,8 @@ $$v_{escape} = \sqrt{\frac{2GM}{R+h}} \approx 10.55 \text{ km/s}$$
 
 3. **Gravity Assists**: Real missions often use planetary gravity assists to achieve the necessary velocity without requiring as much propellant.
 
+![alt text](image.png)
+
 ## Conclusion
 
 The trajectory of a payload released near Earth depends critically on its initial conditions, particularly its velocity magnitude and direction relative to Earth's gravitational field. Our simulations demonstrate that small changes in initial velocity can lead to drastically different trajectories, from sub-orbital flights to stable orbits to escape trajectories.

@@ -3,6 +3,8 @@
 
 ## 1. Theoretical Foundation
 
+![alt text](interference.gif)
+
 ### 1.1 Key Definitions
 
 - **Wave**: A disturbance that propagates through a medium, transferring energy without transferring matter.
@@ -105,6 +107,31 @@ For two sources, the interference pattern forms hyperbolic curves representing p
 The interference pattern inherits symmetry properties from the source arrangement. For regular polygons, the pattern exhibits the same rotational symmetry as the polygon itself.
 
 # Examples and Analysis of Interference Patterns
+
+
+
+<p align="center">
+  <img src="one_source_topdown.gif" width="47%">
+  <img src="one_source.gif" width="40%">
+</p>
+
+<p align="center">
+  <img src="two_sources_topdown.gif" width="47%">
+  <img src="two_sources.gif" width="40%">
+</p>
+
+<p align="center">
+  <img src="triangle_sources_topdown.gif" width="47%">
+  <img src="triangle_sources.gif" width="40%">
+</p>
+
+
+<p align="center">
+  <img src="pentagon_sources_topdown.gif" width="47%">
+  <img src="pentagon_sources.gif" width="40%">
+</p>
+
+
 
 ## Detailed Analysis of Interference Patterns for Different Polygon Configurations
 
