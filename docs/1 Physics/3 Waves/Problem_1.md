@@ -114,63 +114,30 @@ This repository contains visualizations of wave propagation patterns with differ
 
 ## One Source
 
-<div style="display: flex; justify-content: space-between;">
-  <div style="width: 49%; text-align: center;">
-    <img src="./one_source_topdown.gif" alt="Top-down view - one source" style="width: 100%;" />
-    <em>Top-down view</em>
-  </div>
-  <div style="width: 49%; text-align: center;">
-    <img src="./one_source.gif" alt="3D view - one source" style="width: 100%;" />
-    <em>3D perspective view</em>
-  </div>
-</div>
-
-## Two Sources
-
-
-<div style="display: flex; justify-content: space-between;">
-  <div style="width: 49%; text-align: center;">
-    <img src="./two_sources_topdown.gif" alt="Top-down view - two sources" style="width: 100%;" />
-    <em>Top-down view</em>
-  </div>
-  <div style="width: 49%; text-align: center;">
-    <img src="./two_sources.gif" alt="3D view - two sources" style="width: 100%;" />
-    <em>3D perspective view</em>
-  </div>
-</div>
-
-
-## Triangle Sources
-
-<div style="display: flex; justify-content: space-between;">
-  <div style="width: 49%; text-align: center;">
-    <img src="./triangle_sources_topdown.gif" alt="Top-down view - triangle sources" style="width: 100%;" />
-    <em>Top-down view</em>
-  </div>
-  <div style="width: 49%; text-align: center;">
-    <img src="./triangle_sources.gif" alt="3D view - triangle sources" style="width: 100%;" />
-    <em>3D perspective view</em>
-  </div>
-</div>
-
-
-## Pentagon Sources
-
-<div style="display: flex; justify-content: space-between;">
-  <div style="width: 49%; text-align: center;">
-    <img src="./pentagon_sources_topdown.gif" alt="Top-down view - pentagon sources" style="width: 100%;" />
-    <em>Top-down view</em>
-  </div>
-  <div style="width: 49%; text-align: center;">
-    <img src="./pentagon_sources.gif" alt="3D view - pentagon sources" style="width: 100%;" />
-    <em>3D perspective view</em>
-  </div>
-</div>
 
   | ![alt text](one_source_topdown.gif) | ![alt text](one_source.gif) |
   |:-------------------------:|:-------------------------:|
   
 
+## Two Sources
+
+ ![alt text](two_sources_topdown.gif) | ![alt text](two_sources.gif) |
+  |:-------------------------:|:-------------------------:|
+
+
+## Triangle Sources
+
+| ![alt text](triangle_sources_topdown.gif) | ![alt text](triangle_sources.gif) |
+  |:-------------------------:|:-------------------------:|
+
+
+## Pentagon Sources
+
+ ![alt text](pentagon_sources_topdown.gif) | ![alt text](pentagon_sources.gif) |
+  |:-------------------------:|:-------------------------:|
+
+
+  
 ## About
 
 These simulations demonstrate wave interference patterns when waves propagate from different source configurations.
