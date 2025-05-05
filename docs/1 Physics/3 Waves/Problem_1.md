@@ -114,55 +114,60 @@ This repository contains visualizations of wave propagation patterns with differ
 
 ## One Source
 
-<table>
-  <tr>
-    <td width="50%"><img src="one_source_topdown.gif" alt="Top-down view - one source" width="100%"></td>
-    <td width="50%"><img src="one_source.gif" alt="3D view - one source" width="100%"></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Top-down view</em></td>
-    <td align="center"><em>3D perspective view</em></td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 49%; text-align: center;">
+    <img src="./one_source_topdown.gif" alt="Top-down view - one source" style="width: 100%;" />
+    <em>Top-down view</em>
+  </div>
+  <div style="width: 49%; text-align: center;">
+    <img src="./one_source.gif" alt="3D view - one source" style="width: 100%;" />
+    <em>3D perspective view</em>
+  </div>
+</div>
 
 ## Two Sources
 
-<table>
-  <tr>
-    <td width="50%"><img src="two_sources_topdown.gif" alt="Top-down view - two sources" width="100%"></td>
-    <td width="50%"><img src="two_sources.gif" alt="3D view - two sources" width="100%"></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Top-down view</em></td>
-    <td align="center"><em>3D perspective view</em></td>
-  </tr>
-</table>
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 49%; text-align: center;">
+    <img src="./two_sources_topdown.gif" alt="Top-down view - two sources" style="width: 100%;" />
+    <em>Top-down view</em>
+  </div>
+  <div style="width: 49%; text-align: center;">
+    <img src="./two_sources.gif" alt="3D view - two sources" style="width: 100%;" />
+    <em>3D perspective view</em>
+  </div>
+</div>
+
 
 ## Triangle Sources
 
-<table>
-  <tr>
-    <td width="50%"><img src="triangle_sources_topdown.gif" alt="Top-down view - triangle sources" width="100%"></td>
-    <td width="50%"><img src="triangle_sources.gif" alt="3D view - triangle sources" width="100%"></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Top-down view</em></td>
-    <td align="center"><em>3D perspective view</em></td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 49%; text-align: center;">
+    <img src="./triangle_sources_topdown.gif" alt="Top-down view - triangle sources" style="width: 100%;" />
+    <em>Top-down view</em>
+  </div>
+  <div style="width: 49%; text-align: center;">
+    <img src="./triangle_sources.gif" alt="3D view - triangle sources" style="width: 100%;" />
+    <em>3D perspective view</em>
+  </div>
+</div>
+
 
 ## Pentagon Sources
 
-<table>
-  <tr>
-    <td width="50%"><img src="pentagon_sources_topdown.gif" alt="Top-down view - pentagon sources" width="100%"></td>
-    <td width="50%"><img src="pentagon_sources.gif" alt="3D view - pentagon sources" width="100%"></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Top-down view</em></td>
-    <td align="center"><em>3D perspective view</em></td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 49%; text-align: center;">
+    <img src="./pentagon_sources_topdown.gif" alt="Top-down view - pentagon sources" style="width: 100%;" />
+    <em>Top-down view</em>
+  </div>
+  <div style="width: 49%; text-align: center;">
+    <img src="./pentagon_sources.gif" alt="3D view - pentagon sources" style="width: 100%;" />
+    <em>3D perspective view</em>
+  </div>
+</div>
+
+
 
 ## About
 
