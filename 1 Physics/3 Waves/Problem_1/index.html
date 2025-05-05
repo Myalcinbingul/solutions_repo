@@ -172,6 +172,166 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="wave-interference-patterns-on-water-surface">Wave Interference Patterns on Water Surface</h1>
+<h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
+<h3 id="11-key-definitions">1.1 Key Definitions</h3>
+<ul>
+<li><strong>Wave</strong>: A disturbance that propagates through a medium, transferring energy without transferring matter.</li>
+<li><strong>Interference</strong>: The phenomenon that occurs when two or more waves overlap, resulting in a new wave pattern.</li>
+<li><strong>Constructive Interference</strong>: Occurs when waves align such that their crests and troughs coincide, resulting in a wave with increased amplitude.</li>
+<li><strong>Destructive Interference</strong>: Occurs when waves align such that the crest of one wave coincides with the trough of another, resulting in decreased amplitude or complete cancellation.</li>
+<li><strong>Coherent Sources</strong>: Wave sources that maintain a constant phase relationship over time.</li>
+<li><strong>Phase Difference</strong>: The difference in the oscillation stage between two waves.</li>
+</ul>
+<h3 id="12-mathematical-representation-of-water-surface-waves">1.2 Mathematical Representation of Water Surface Waves</h3>
+<p>For a circular wave on a water surface emanating from a point source at <span class="arithmatex">\((x_0, y_0)\)</span>, the displacement is given by:</p>
+<div class="arithmatex">\[\eta(x, y, t) = \frac{A}{\sqrt{r}} \cdot \cos(kr - \omega t + \phi)\]</div>
+<p>Where:
+- <span class="arithmatex">\(\eta(x, y, t)\)</span> represents the displacement of the water surface at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span>
+- <span class="arithmatex">\(A\)</span> is the wave amplitude
+- <span class="arithmatex">\(r = \sqrt{(x - x_0)^2 + (y - y_0)^2}\)</span> is the distance from the source to point <span class="arithmatex">\((x, y)\)</span>
+- <span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span> is the wave number, with <span class="arithmatex">\(\lambda\)</span> being the wavelength
+- <span class="arithmatex">\(\omega = 2\pi f\)</span> is the angular frequency, with <span class="arithmatex">\(f\)</span> being the frequency
+- <span class="arithmatex">\(\phi\)</span> is the initial phase of the wave</p>
+<h3 id="13-principle-of-superposition">1.3 Principle of Superposition</h3>
+<p>When multiple waves overlap at a point, the resulting displacement is the algebraic sum of the individual wave displacements:</p>
+<div class="arithmatex">\[\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t)\]</div>
+<p>For <span class="arithmatex">\(N\)</span> sources positioned at coordinates <span class="arithmatex">\((x_i, y_i)\)</span> with <span class="arithmatex">\(i = 1, 2, ..., N\)</span>, the total displacement becomes:</p>
+<div class="arithmatex">\[\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^{N} \frac{A}{\sqrt{r_i}} \cdot \cos(kr_i - \omega t + \phi_i)\]</div>
+<p>Where <span class="arithmatex">\(r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}\)</span> is the distance from the <span class="arithmatex">\(i\)</span>-th source to the point <span class="arithmatex">\((x, y)\)</span>.</p>
+<h2 id="2-interference-patterns-analysis">2. Interference Patterns Analysis</h2>
+<h3 id="21-conditions-for-interference-extrema">2.1 Conditions for Interference Extrema</h3>
+<p>For two sources with the same amplitude, frequency, and phase:</p>
+<ul>
+<li><strong>Constructive Interference</strong>: Occurs when the path difference <span class="arithmatex">\(\Delta r = r_2 - r_1 = n\lambda\)</span>, where <span class="arithmatex">\(n = 0, 1, 2, ...\)</span></li>
+<li><strong>Destructive Interference</strong>: Occurs when <span class="arithmatex">\(\Delta r = (n + \frac{1}{2})\lambda\)</span>, where <span class="arithmatex">\(n = 0, 1, 2, ...\)</span></li>
+</ul>
+<p>For multiple sources arranged in regular polygon vertices, the interference pattern becomes more complex, with multiple regions of constructive and destructive interference.</p>
+<h3 id="22-amplitude-decay-with-distance">2.2 Amplitude Decay with Distance</h3>
+<p>Note that the amplitude of a circular wave decreases with distance according to <span class="arithmatex">\(\frac{1}{\sqrt{r}}\)</span>. This is because the energy of the wave spreads out over an increasingly larger circumference as the wave propagates.</p>
+<h2 id="3-regular-polygon-source-configurations">3. Regular Polygon Source Configurations</h2>
+<h3 id="31-equilateral-triangle-configuration">3.1 Equilateral Triangle Configuration</h3>
+<p>For sources placed at the vertices of an equilateral triangle with side length <span class="arithmatex">\(a\)</span>, the coordinates can be chosen as:
+- Source 1: <span class="arithmatex">\((0, 0)\)</span>
+- Source 2: <span class="arithmatex">\((a, 0)\)</span>
+- Source 3: <span class="arithmatex">\((a/2, a\sqrt{3}/2)\)</span></p>
+<h3 id="32-square-configuration">3.2 Square Configuration</h3>
+<p>For sources placed at the vertices of a square with side length <span class="arithmatex">\(a\)</span>, the coordinates can be chosen as:
+- Source 1: <span class="arithmatex">\((0, 0)\)</span>
+- Source 2: <span class="arithmatex">\((a, 0)\)</span>
+- Source 3: <span class="arithmatex">\((a, a)\)</span>
+- Source 4: <span class="arithmatex">\((0, a)\)</span></p>
+<h3 id="33-regular-pentagon-configuration">3.3 Regular Pentagon Configuration</h3>
+<p>For sources placed at the vertices of a regular pentagon with side length <span class="arithmatex">\(a\)</span>, the coordinates can be determined using the formula:
+- Source <span class="arithmatex">\(i\)</span>: <span class="arithmatex">\((R\cos(2\pi i/5), R\sin(2\pi i/5))\)</span> for <span class="arithmatex">\(i = 0, 1, 2, 3, 4\)</span>
+  where <span class="arithmatex">\(R = \frac{a}{2\sin(\pi/5)}\)</span> is the radius of the circumscribed circle.</p>
+<h2 id="4-mathematical-solution-and-implementation-approach">4. Mathematical Solution and Implementation Approach</h2>
+<p>To analyze the interference patterns:</p>
+<ol>
+<li>Define the positions of the sources based on the chosen regular polygon.</li>
+<li>Calculate the distance <span class="arithmatex">\(r_i\)</span> from each source to every point <span class="arithmatex">\((x, y)\)</span> in the region of interest.</li>
+<li>Compute the displacement contribution <span class="arithmatex">\(\eta_i(x, y, t)\)</span> from each source.</li>
+<li>Apply the superposition principle to find the total displacement <span class="arithmatex">\(\eta_{\text{sum}}(x, y, t)\)</span>.</li>
+<li>Visualize the interference pattern at a specific time <span class="arithmatex">\(t\)</span> by plotting <span class="arithmatex">\(\eta_{\text{sum}}(x, y, t)\)</span>.</li>
+</ol>
+<h2 id="5-analysis-of-interference-patterns">5. Analysis of Interference Patterns</h2>
+<h3 id="51-static-interference-pattern">5.1 Static Interference Pattern</h3>
+<p>For a fixed time <span class="arithmatex">\(t\)</span>, the interference pattern shows regions of high amplitude (constructive interference) and low amplitude (destructive interference). These regions form specific geometric patterns depending on the arrangement of sources.</p>
+<h3 id="52-time-evolution">5.2 Time Evolution</h3>
+<p>As time progresses, the interference pattern evolves, with waves propagating outward from each source. However, the locations of constructive and destructive interference maintain their geometric arrangement if all sources have the same frequency.</p>
+<h3 id="53-hyperbolic-patterns">5.3 Hyperbolic Patterns</h3>
+<p>For two sources, the interference pattern forms hyperbolic curves representing points where the path difference <span class="arithmatex">\(\Delta r\)</span> is constant. These are known as hyperbolas of constant phase difference.</p>
+<h3 id="54-symmetry-considerations">5.4 Symmetry Considerations</h3>
+<p>The interference pattern inherits symmetry properties from the source arrangement. For regular polygons, the pattern exhibits the same rotational symmetry as the polygon itself.</p>
+<h1 id="examples-and-analysis-of-interference-patterns">Examples and Analysis of Interference Patterns</h1>
+<h2 id="detailed-analysis-of-interference-patterns-for-different-polygon-configurations">Detailed Analysis of Interference Patterns for Different Polygon Configurations</h2>
+<h3 id="1-equilateral-triangle-configuration-analysis">1. Equilateral Triangle Configuration Analysis</h3>
+<p>When three coherent wave sources are placed at the vertices of an equilateral triangle, the resulting interference pattern exhibits three-fold rotational symmetry. Let's analyze this configuration in detail:</p>
+<h4 id="key-features">Key Features:</h4>
+<ul>
+<li><strong>Interference Maxima</strong>: Points where the path difference from the three sources satisfies the condition for constructive interference occur along specific curves.</li>
+<li><strong>Interference Minima</strong>: Similarly, destructive interference occurs along curves where the path differences result in wave cancellation.</li>
+<li><strong>Central Region</strong>: Near the center of the triangle, complex interference patterns form due to the equidistant nature of the sources.</li>
+</ul>
+<h4 id="mathematical-analysis">Mathematical Analysis:</h4>
+<p>For an equilateral triangle with vertices at <span class="arithmatex">\((0,0)\)</span>, <span class="arithmatex">\((a,0)\)</span>, and <span class="arithmatex">\((a/2, a\sqrt{3}/2)\)</span>, the total displacement at a point <span class="arithmatex">\((x,y)\)</span> at time <span class="arithmatex">\(t\)</span> is:</p>
+<div class="arithmatex">\[\eta_{\text{sum}}(x, y, t) = \frac{A}{\sqrt{r_1}} \cos(kr_1 - \omega t + \phi) + \frac{A}{\sqrt{r_2}} \cos(kr_2 - \omega t + \phi) + \frac{A}{\sqrt{r_3}} \cos(kr_3 - \omega t + \phi)\]</div>
+<p>Where:
+- <span class="arithmatex">\(r_1 = \sqrt{x^2 + y^2}\)</span>
+- <span class="arithmatex">\(r_2 = \sqrt{(x-a)^2 + y^2}\)</span>
+- <span class="arithmatex">\(r_3 = \sqrt{(x-a/2)^2 + (y-a\sqrt{3}/2)^2}\)</span></p>
+<p>For constructive interference to occur, the phase differences between pairs of waves must be integer multiples of <span class="arithmatex">\(2\pi\)</span>, which leads to path difference conditions:</p>
+<div class="arithmatex">\[|r_i - r_j| = n\lambda, \quad n = 0, 1, 2, ...\]</div>
+<p>For all pairs <span class="arithmatex">\((i,j)\)</span> among the three sources.</p>
+<h3 id="2-square-configuration-analysis">2. Square Configuration Analysis</h3>
+<p>Four sources placed at the vertices of a square create interference patterns with four-fold rotational symmetry.</p>
+<h4 id="key-features_1">Key Features:</h4>
+<ul>
+<li><strong>Checkerboard Pattern</strong>: In the central region of the square, a checkerboard-like pattern of interference maxima and minima emerges.</li>
+<li><strong>Diagonal Symmetry</strong>: Strong interference bands appear along the diagonals of the square.</li>
+<li><strong>Edge Effects</strong>: Complex interference patterns appear outside the square, with hyperbolic curves forming as the loci of constant path differences.</li>
+</ul>
+<h4 id="mathematical-analysis_1">Mathematical Analysis:</h4>
+<p>For a square with vertices at <span class="arithmatex">\((0,0)\)</span>, <span class="arithmatex">\((a,0)\)</span>, <span class="arithmatex">\((a,a)\)</span>, and <span class="arithmatex">\((0,a)\)</span>, the total displacement is given by:</p>
+<div class="arithmatex">\[\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^{4} \frac{A}{\sqrt{r_i}} \cos(kr_i - \omega t + \phi)\]</div>
+<p>Where <span class="arithmatex">\(r_i\)</span> represents the distance from point <span class="arithmatex">\((x,y)\)</span> to the <span class="arithmatex">\(i\)</span>-th source.</p>
+<h3 id="3-regular-pentagon-configuration-analysis">3. Regular Pentagon Configuration Analysis</h3>
+<p>Five sources arranged at the vertices of a regular pentagon produce a complex interference pattern with five-fold rotational symmetry.</p>
+<h4 id="key-features_2">Key Features:</h4>
+<ul>
+<li><strong>Star-like Pattern</strong>: The interference pattern forms a star-like structure with five-fold symmetry.</li>
+<li><strong>Concentric Rings</strong>: Multiple concentric rings of constructive and destructive interference form around the center of the pentagon.</li>
+<li><strong>Nodal Lines</strong>: Five distinct nodal lines (where displacement is consistently near zero) radiate outward from the center.</li>
+</ul>
+<h4 id="relation-to-optical-phenomena">Relation to Optical Phenomena:</h4>
+<p>This configuration is particularly interesting as it relates to optical diffraction patterns from apertures with five-fold symmetry. The mathematics of these patterns connects to concepts in crystallography and quasicrystals.</p>
+<h2 id="numerical-results-and-visual-analysis">Numerical Results and Visual Analysis</h2>
+<p>Below are the results from our numerical simulations showing the interference patterns for different polygon configurations.</p>
+<h3 id="example-1-equilateral-triangle-configuration">Example 1: Equilateral Triangle Configuration</h3>
+<p>For wavelength <span class="arithmatex">\(\lambda = 0.3\)</span> and sources at the vertices of an equilateral triangle with side length <span class="arithmatex">\(a = 1.0\)</span>:</p>
+<p>The interference pattern shows three primary directions of constructive interference radiating outward from the center of the triangle. These directions are perpendicular to the sides of the triangle. The pattern exhibits:</p>
+<ol>
+<li><strong>Primary Maxima</strong>: Three primary bands of constructive interference</li>
+<li><strong>Secondary Maxima</strong>: Smaller maxima between the primary bands</li>
+<li><strong>Central Interference</strong>: Complex pattern in the central region where all three waves interact strongly</li>
+</ol>
+<h3 id="example-2-square-configuration">Example 2: Square Configuration</h3>
+<p>For the same wavelength <span class="arithmatex">\(\lambda = 0.3\)</span> and sources at the vertices of a square with side length <span class="arithmatex">\(a = 1.0\)</span>:</p>
+<p>The square configuration produces a more complex pattern with:</p>
+<ol>
+<li><strong>Grid-like Structure</strong>: A grid of maxima and minima forms within the square</li>
+<li><strong>Diagonal Enhancement</strong>: Enhanced constructive interference along the diagonals of the square</li>
+<li><strong>Central Null</strong>: A region of destructive interference can form at the center, depending on the wavelength relative to the square size</li>
+</ol>
+<h3 id="example-3-regular-pentagon-configuration">Example 3: Regular Pentagon Configuration</h3>
+<p>For wavelength <span class="arithmatex">\(\lambda = 0.3\)</span> and sources at the vertices of a regular pentagon with side length <span class="arithmatex">\(a = 1.0\)</span>:</p>
+<p>The pentagon configuration produces:</p>
+<ol>
+<li><strong>Five-fold Symmetry</strong>: Clear five-fold symmetry in the interference pattern</li>
+<li><strong>Star Pattern</strong>: A star-like pattern of constructive interference</li>
+<li><strong>Concentric Structures</strong>: Multiple concentric rings of alternating constructive and destructive interference</li>
+<li><strong>Fibonacci Relation</strong>: Interestingly, some features of the interference pattern relate to Fibonacci numbers and the golden ratio, which are inherently connected to pentagon geometry</li>
+</ol>
+<h2 id="practical-applications-and-connections">Practical Applications and Connections</h2>
+<p>The study of these interference patterns has numerous applications:</p>
+<ol>
+<li><strong>Acoustics</strong>: Understanding how multiple speakers in an array produce interference patterns helps in designing sound systems.</li>
+<li><strong>Optics</strong>: Multiple-slit diffraction and diffraction gratings operate on similar principles.</li>
+<li><strong>Antenna Design</strong>: Phased array antennas use interference principles to direct radio waves.</li>
+<li><strong>Materials Science</strong>: X-ray diffraction patterns from crystal structures follow similar mathematical principles.</li>
+<li><strong>Quantum Physics</strong>: Electron interference patterns in the double-slit experiment demonstrate wave-particle duality.</li>
+</ol>
+<h2 id="time-evolution-analysis">Time Evolution Analysis</h2>
+<p>When animated over time, the interference patterns show:</p>
+<ol>
+<li><strong>Radial Propagation</strong>: Waves propagate radially outward from each source</li>
+<li><strong>Stationary Pattern Structure</strong>: While the waves move, the overall geometric structure of the interference pattern remains stable</li>
+<li><strong>Phase Cycling</strong>: The displacement at any given point cycles through positive and negative values at frequency <span class="arithmatex">\(f\)</span></li>
+<li><strong>Group Velocity Effects</strong>: Wave packets would propagate through the interference pattern at the group velocity</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The interference patterns produced by wave sources arranged in regular polygon configurations demonstrate the rich behavior that emerges from simple wave superposition. These patterns exhibit the symmetry of the underlying source arrangement while creating complex structures through constructive and destructive interference.</p>
+<p>The mathematical framework we've developed allows for the exploration of these patterns for any regular polygon configuration and any choice of wavelength relative to the polygon size. This analysis provides valuable insights into wave behavior that can be applied across multiple disciplines in physics and engineering.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
