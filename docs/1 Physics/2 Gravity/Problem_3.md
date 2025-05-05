@@ -62,7 +62,7 @@ The trajectory of a payload depends on its specific mechanical energy $\varepsil
 $$\varepsilon = \frac{v^2}{2} - \frac{GM}{r}$$
 
 
-![alt text](image.png)
+![alt text](image-6.png)
 
 This energy determines the type of conic section the trajectory will follow:
 
@@ -71,7 +71,7 @@ This energy determines the type of conic section the trajectory will follow:
 3. **Parabolic trajectory** ($\varepsilon = 0$): The payload follows a parabola and has exactly escape velocity.
 4. **Hyperbolic trajectory** ($\varepsilon > 0$): The payload has more than escape velocity and will never return.
 
-![alt text](image-13.png)
+
 
 ### Escape Velocity
 
@@ -123,7 +123,7 @@ $$r = \frac{a(1-e^2)}{1+e\cos\nu}$$
 
 Below is a Python implementation to simulate and visualize trajectories of a payload under Earth's gravitational influence:
 
-![alt text](image-4.png)
+
 
 ### Simulation Cases
 
