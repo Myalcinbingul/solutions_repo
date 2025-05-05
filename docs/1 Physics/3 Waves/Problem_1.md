@@ -167,6 +167,18 @@ This repository contains visualizations of wave propagation patterns with differ
   </div>
 </div>
 
+<h2>One Source</h2>
+
+<table>
+  <tr>
+    <td><img src="/docs/1%20Physics/3%20Waves/one_source_topdown.gif" alt="Top-down view" width="100%"></td>
+    <td><img src="/docs/1%20Physics/3%20Waves/one_source.gif" alt="3D view" width="100%"></td>
+  </tr>
+</table>
+
+## One Source
+
+![Top-down view](one_source_topdown.gif) ![3D view](one_source.gif)
 
 
 ## About
