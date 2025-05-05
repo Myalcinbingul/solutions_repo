@@ -144,6 +144,10 @@ The interference pattern inherits symmetry properties from the source arrangemen
   </tr>
 </table>
 
+<div style="display: flex; justify-content: space-around;">
+  <img src="one_source_topdown.gif" alt="First GIF" style="width: 45%;" />
+  <img src="one_source.gif" alt="Second GIF" style="width: 45%;" />
+</div>
 
 
 ## Detailed Analysis of Interference Patterns for Different Polygon Configurations
