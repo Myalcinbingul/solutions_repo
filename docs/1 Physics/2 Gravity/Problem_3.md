@@ -123,6 +123,8 @@ $$r = \frac{a(1-e^2)}{1+e\cos\nu}$$
 
 Below is a Python implementation to simulate and visualize trajectories of a payload under Earth's gravitational influence:
 
+![alt text](image-4.png)
+
 ### Simulation Cases
 
 We will analyze two main cases:
