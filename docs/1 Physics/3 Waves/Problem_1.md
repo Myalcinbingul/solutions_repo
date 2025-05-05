@@ -131,7 +131,7 @@ The interference pattern inherits symmetry properties from the source arrangemen
 
 <table>
   <tr>
-    <td><img src="triangle_sources_topdown.gif" alt="Top-down view - triangle sources" width="100%"></td>
+    <td><img src=" triangle_sources_topdown.gif " alt="Top-down view - triangle sources" width="100%"></td>
     <td><img src="triangle_sources.gif" alt="3D view - triangle sources" width="100%"></td>
   </tr>
 </table>
