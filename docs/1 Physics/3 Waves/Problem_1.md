@@ -136,8 +136,6 @@ This repository contains visualizations of wave propagation patterns with differ
  ![alt text](pentagon_sources_topdown.gif) | ![alt text](pentagon_sources.gif) |
   |:-------------------------:|:-------------------------:|
 
-
-  
 ## About
 
 These simulations demonstrate wave interference patterns when waves propagate from different source configurations.
@@ -258,6 +256,8 @@ When animated over time, the interference patterns show:
 2. **Stationary Pattern Structure**: While the waves move, the overall geometric structure of the interference pattern remains stable
 3. **Phase Cycling**: The displacement at any given point cycles through positive and negative values at frequency $f$
 4. **Group Velocity Effects**: Wave packets would propagate through the interference pattern at the group velocity
+
+[Open in Google Colab](https://colab.research.google.com/drive/1TC5Slb2VNmU_ur-S16elc1aoWK2B13JF?usp=sharing)
 
 ## Conclusion
 
