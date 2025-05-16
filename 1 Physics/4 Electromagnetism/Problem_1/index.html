@@ -172,6 +172,100 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="lorentz-force-simulation-theory">Lorentz Force — Simulation &amp; Theory</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The <strong>Lorentz Force</strong> is the fundamental force experienced by a charged particle in electric and magnetic fields:</p>
+<div class="arithmatex">\[
+\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(q\)</span>: charge (Coulombs)
+- <span class="arithmatex">\(\mathbf{E}\)</span>: electric field (V/m)
+- <span class="arithmatex">\(\mathbf{v}\)</span>: velocity vector (m/s)
+- <span class="arithmatex">\(\mathbf{B}\)</span>: magnetic field (Tesla)</p>
+<blockquote>
+<p><strong>Important:</strong> In this project, we simulate a macroscopic particle with<br/>
+<span class="arithmatex">\(q = 1~\text{C}\)</span> and <span class="arithmatex">\(m = 1~\text{g} = 10^{-3}~\text{kg}\)</span><br/>
+instead of tiny electron values to ensure visible and meaningful trajectories.</p>
+</blockquote>
+<hr/>
+<h2 id="useful-concepts-formulas">Useful Concepts &amp; Formulas</h2>
+<h3 id="1-magnetic-force-only-no-electric-field">1. Magnetic Force Only (no electric field)</h3>
+<p>$$
+\mathbf{F} = q\mathbf{v} \times \mathbf{B}
+$$
+- Direction: Perpendicular to both <span class="arithmatex">\(\mathbf{v}\)</span> and <span class="arithmatex">\(\mathbf{B}\)</span>
+- Result: <strong>Circular</strong> or <strong>helical</strong> motion</p>
+<h3 id="2-larmor-radius">2. Larmor Radius</h3>
+<div class="arithmatex">\[
+r_L = \frac{mv_\perp}{|q|B}
+\]</div>
+<h3 id="3-cyclotron-frequency">3. Cyclotron Frequency</h3>
+<div class="arithmatex">\[
+\omega_c = \frac{|q|B}{m}
+\]</div>
+<h3 id="4-e-b-drift-velocity">4. E × B Drift Velocity</h3>
+<div class="arithmatex">\[
+\mathbf{v}_d = \frac{\mathbf{E} \times \mathbf{B}}{B^2}
+\]</div>
+<hr/>
+<h2 id="example-problem">Example Problem</h2>
+<h3 id="circular-trajectory"><strong>Circular Trajectory</strong></h3>
+<p><strong>Given:</strong>
+- <span class="arithmatex">\(q = 1~\text{C}\)</span>, <span class="arithmatex">\(m = 10^{-3}~\text{kg}\)</span>
+- <span class="arithmatex">\(v_\perp = 1~\text{m/s}\)</span>, <span class="arithmatex">\(B = 1~\text{T}\)</span></p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>
+<p>Larmor Radius:
+$$
+r_L = \frac{10^{-3} \cdot 1}{1 \cdot 1} = 10^{-3}~\text{m}
+$$</p>
+</li>
+<li>
+<p>Cyclotron Frequency:
+$$
+\omega_c = \frac{1 \cdot 1}{10^{-3}} = 1000~\text{rad/s}
+$$</p>
+</li>
+</ol>
+<hr/>
+<h2 id="simulated-scenarios">Simulated Scenarios</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Initial Conditions</th>
+<th>Expected Motion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Circular</strong></td>
+<td><span class="arithmatex">\(\mathbf{v} \perp \mathbf{B}\)</span> only</td>
+<td>Particle loops in plane</td>
+</tr>
+<tr>
+<td><strong>Spiral in <span class="arithmatex">\(z\)</span></strong></td>
+<td><span class="arithmatex">\(\mathbf{v}\)</span> has <span class="arithmatex">\(v_z\)</span> component, <span class="arithmatex">\(\mathbf{B} = B_z\)</span></td>
+<td>Helix around <span class="arithmatex">\(z\)</span>-axis</td>
+</tr>
+<tr>
+<td><strong>Drift Motion</strong></td>
+<td><span class="arithmatex">\(\mathbf{E} \perp \mathbf{B}\)</span></td>
+<td>Uniform drift</td>
+</tr>
+</tbody>
+</table>
+<p>Visualizations for each are in the <a href="../notebooks/lorentz_simulation.ipynb">simulation notebook</a>.</p>
+<hr/>
+<h2 id="hints">💬 Hints</h2>
+<ul>
+<li>Use larger <span class="arithmatex">\(q\)</span> and <span class="arithmatex">\(m\)</span> for macroscopic scale motion</li>
+<li>Start with circular motion</li>
+<li>Introduce axial velocity for helices</li>
+<li>Add electric field for drift behavior</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
