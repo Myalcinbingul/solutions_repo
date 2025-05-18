@@ -172,6 +172,70 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Calculating equivalent resistance is a fundamental task in analyzing electrical circuits. Traditional methods rely on applying series and parallel rules repeatedly, which becomes cumbersome for complex networks.</p>
+<p><strong>Graph theory</strong> provides a structured and scalable approach by modeling circuits as graphs:
+- <strong>Nodes</strong> = Junctions
+- <strong>Edges</strong> = Resistors, with weights equal to resistance values</p>
+<p>This method is not only systematic but also useful for automation and simulations in engineering and computer science.</p>
+<hr/>
+<h2 id="definitions">Definitions</h2>
+<ul>
+<li><strong>Graph</strong>: A collection of nodes (vertices) and edges (connections), where edges can carry weights.</li>
+<li><strong>Series Connection</strong>: Resistors connected end-to-end. The same current flows through each.</li>
+<li><strong>Parallel Connection</strong>: Resistors connected across the same two nodes. Voltage across each is the same.</li>
+<li><strong>Equivalent Resistance (<span class="arithmatex">\(R_{\text{eq}}\)</span>)</strong>: The single resistance that can replace a network of resistors between two terminals.</li>
+</ul>
+<hr/>
+<h2 id="formulas">Formulas</h2>
+<ul>
+<li>
+<p><strong>Ohm’s Law</strong>:<br/>
+  $$ V = IR $$</p>
+</li>
+<li>
+<p><strong>Resistors in Series</strong>:<br/>
+  $$ R_{\text{eq}} = R_1 + R_2 + \cdots + R_n $$</p>
+</li>
+<li>
+<p><strong>Resistors in Parallel</strong>:<br/>
+  $$ \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n} $$</p>
+</li>
+</ul>
+<hr/>
+<h2 id="algorithm-using-graph-theory">Algorithm Using Graph Theory</h2>
+<h3 id="goal">Goal</h3>
+<p>Reduce a resistor network to a single equivalent resistance between two terminals using graph-based simplification.</p>
+<h3 id="algorithm-steps">Algorithm Steps</h3>
+<ol>
+<li><strong>Graph Representation</strong>:</li>
+<li>Each junction is a node.</li>
+<li>
+<p>Each resistor is an edge with a weight (resistance).</p>
+</li>
+<li>
+<p><strong>Iterative Simplification</strong>:</p>
+</li>
+<li>Detect linear chains and apply series reduction.</li>
+<li>
+<p>Detect cycles/branches and apply parallel reduction.</p>
+</li>
+<li>
+<p><strong>Repeat Until</strong>:</p>
+</li>
+<li>The graph is reduced to two nodes (terminals), and one edge (final resistance).</li>
+</ol>
+<hr/>
+<h2 id="python-code-google-colab-compatible">Python Code (Google Colab Compatible)</h2>
+<p>```python</p>
+<p>````</p>
+<h2 id="efficiency-improvements">📈 Efficiency &amp; Improvements</h2>
+<ul>
+<li>For arbitrary graphs, use DFS/BFS to detect cycles and paths.</li>
+<li>Edge contractions and custom graph traversal rules improve performance.</li>
+<li>Replace rule-based detection with symbolic solvers or matrix-based solvers for large circuits.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
