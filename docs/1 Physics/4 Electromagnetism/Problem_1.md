@@ -2,7 +2,7 @@
 
 #  Lorentz Force — Simulation & Theory
 
-##  Introduction
+## Introduction
 
 The **Lorentz Force** is the fundamental force experienced by a charged particle in electric and magnetic fields:
 
@@ -11,9 +11,13 @@ $$
 $$
 
 Where:
+
 - $q$: charge (Coulombs)
+
 - $\mathbf{E}$: electric field (V/m)
+
 - $\mathbf{v}$: velocity vector (m/s)
+
 - $\mathbf{B}$: magnetic field (Tesla)
 
 > **Important:** In this project, we simulate a macroscopic particle with  
