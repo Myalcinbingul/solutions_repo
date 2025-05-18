@@ -180,4 +180,6 @@ Expected trajectory:
 ![alt text](exb_drift.gif) |  ![alt text](image-2.png) |
   |:-------------------------:|:-------------------------:|
 
-Visualizations for each are in the [Google Colab](https://colab.research.google.com/drive/1xKfLyHu_g3Ok0v1teVgerG4qRpZNWKgG?authuser=1#scrollTo=dZHomL-rZeLJ).
+Visualizations for each are in the
+
+ [Google Colab](https://colab.research.google.com/drive/1xKfLyHu_g3Ok0v1teVgerG4qRpZNWKgG?usp=sharing)
