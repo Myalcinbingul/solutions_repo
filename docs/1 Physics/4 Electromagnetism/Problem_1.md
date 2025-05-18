@@ -46,45 +46,96 @@ $$
 \mathbf{v}_d = \frac{\mathbf{E} \times \mathbf{B}}{B^2}
 $$
 
----
 
-##  Example Problem
-
-### **Circular Trajectory**
-
-**Given:**
-- $q = 1~\text{C}$, $m = 10^{-3}~\text{kg}$
-- $v_\perp = 1~\text{m/s}$, $B = 1~\text{T}$
-
-**Solution:**
-
-1. Larmor Radius:
-$$
-r_L = \frac{10^{-3} \cdot 1}{1 \cdot 1} = 10^{-3}~\text{m}
-$$
-
-2. Cyclotron Frequency:
-$$
-\omega_c = \frac{1 \cdot 1}{10^{-3}} = 1000~\text{rad/s}
-$$
 
 ---
 
-##  Simulated Scenarios
+# Charged Particle Motion in Electromagnetic Fields
 
-| Scenario        | Initial Conditions                                      | Expected Motion        |
-|------------------|----------------------------------------------------------|--------------------------|
-| **Circular**     | $\mathbf{v} \perp \mathbf{B}$ only                      | Particle loops in plane |
-| **Spiral in $z$**| $\mathbf{v}$ has $v_z$ component, $\mathbf{B} = B_z$   | Helix around $z$-axis   |
-| **Drift Motion** | $\mathbf{E} \perp \mathbf{B}$                          | Uniform drift           |
+## Scenario 1: Circular Motion (Pure B Field)
 
-Visualizations for each are in the [simulation notebook](../notebooks/lorentz_simulation.ipynb).
+### Physical Setup
+- **Fields**: 
+  - Magnetic: $\vec{B} = (0, 0, 0.5)$ T (z-direction)
+  - Electric: $\vec{E} = \vec{0}$
+- **Initial Conditions**: 
+  - Position: $\vec{r}_0 = (0, 0, 0)$ m
+  - Velocity: $\vec{v}_0 = (2.0, 0, 0)$ m/s (perpendicular to B)
+
+### Theory
+The particle executes circular motion with:
+- Cyclotron radius: $r = \frac{mv_\perp}{qB} = \frac{0.01 \times 2.0}{10^{-4} \times 0.5} = 0.4$ m
+- Cyclotron period: $T = \frac{2\pi m}{qB} \approx 1.26$ s
+
+
+
+### Key Characteristics
+1. Planar motion in x-y plane
+2. Constant speed $v_\perp = 2.0$ m/s
+3. Radius matches theoretical prediction:
+
 
 ---
 
-## 💬 Hints
+## Scenario 2: Helical Motion (Added Axial Velocity)
 
-- Use larger $q$ and $m$ for macroscopic scale motion
-- Start with circular motion
-- Introduce axial velocity for helices
-- Add electric field for drift behavior
+### Physical Setup
+- **Fields**: Same as Scenario 1
+- **Initial Conditions**: 
+  - $\vec{v}_0 = (2.0, 0, 1.5)$ m/s (added z-component)
+
+### Theory
+Superposition of:
+1. Circular motion in x-y plane ($v_\perp = 2.0$ m/s)
+2. Uniform motion along z-axis ($v_\parallel = 1.5$ m/s)
+
+Pitch distance: $p = v_\parallel \cdot T \approx 1.5 \times 1.26 \approx 1.89$ m
+
+
+
+---
+
+## Scenario 3: E×B Drift (Crossed Fields)
+
+### Physical Setup
+- **Fields**:
+  - $\vec{E} = (1.0, 0, 0)$ V/m
+  - $\vec{B} = (0, 0, 0.5)$ T
+- **Initial Conditions**: $\vec{v}_0 = \vec{0}$
+
+### Theory
+Drift velocity given by:
+$$\vec{v}_E = \frac{\vec{E} \times \vec{B}}{B^2} = (0, 2.0, 0) \text{ m/s}$$
+
+Expected trajectory:
+1. Initial acceleration in x-direction
+2. Curved transition phase
+3. Steady drift in y-direction
+
+
+
+## Comparative Analysis
+
+| Scenario        | Field Configuration | Motion Type | Characteristic Velocity |
+|----------------|--------------------|------------|------------------------|
+| Circular       | Pure B             | Planar     | $v_\perp$ only         |
+| Helical        | Pure B             | 3D spiral  | $v_\perp + v_\parallel$|
+| E×B Drift      | Crossed E and B     | Curved drift | $v_E = E/B$          |
+
+## Scenario 1: Circular Motion (Pure B Field)
+
+
+![alt text](circular_motion.gif) |![alt text](image.png) |
+  |:-------------------------:|:-------------------------:|
+
+## Scenario 2: Helical Motion (Added Axial Velocity)
+
+![alt text](helical_motion.gif) |  ![alt text](image-1.png) |
+  |:-------------------------:|:-------------------------:|
+
+## Scenario 3: E×B Drift (Crossed Fields)
+
+![alt text](exb_drift.gif) |  ![alt text](image-2.png) |
+  |:-------------------------:|:-------------------------:|
+
+Visualizations for each are in the [Google Colab](https://colab.research.google.com/drive/1xKfLyHu_g3Ok0v1teVgerG4qRpZNWKgG?authuser=1#scrollTo=dZHomL-rZeLJ).
