@@ -104,8 +104,25 @@ Pitch distance: $p = v_\parallel \cdot T \approx 1.5 \times 1.26 \approx 1.89$ m
 - **Initial Conditions**: $\vec{v}_0 = \vec{0}$
 
 ### Theory
+
 Drift velocity given by:
-$$\vec{v}_E = \frac{\vec{E} \times \vec{B}}{B^2} = (0, 2.0, 0) \text{ m/s}$$
+
+### Theory
+
+The **E × B drift velocity** is given by:
+
+$$
+\vec{v}_E = \frac{\vec{E} \times \vec{B}}{B^2}
+= \frac{(1.0\,\hat{i}) \times (0.5\,\hat{k})}{(0.5)^2}
+= \frac{0.5\,\hat{j}}{0.25}
+= 2.0\,\hat{j} \text{ m/s}
+$$
+
+Thus,
+
+$$
+\vec{v}_E = (0, 2.0, 0)\ \text{m/s}
+$$
 
 Expected trajectory:
 1. Initial acceleration in x-direction
