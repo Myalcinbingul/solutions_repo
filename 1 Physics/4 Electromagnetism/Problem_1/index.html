@@ -209,63 +209,133 @@ r_L = \frac{mv_\perp}{|q|B}
 \mathbf{v}_d = \frac{\mathbf{E} \times \mathbf{B}}{B^2}
 \]</div>
 <hr/>
-<h2 id="example-problem">Example Problem</h2>
-<h3 id="circular-trajectory"><strong>Circular Trajectory</strong></h3>
-<p><strong>Given:</strong>
-- <span class="arithmatex">\(q = 1~\text{C}\)</span>, <span class="arithmatex">\(m = 10^{-3}~\text{kg}\)</span>
-- <span class="arithmatex">\(v_\perp = 1~\text{m/s}\)</span>, <span class="arithmatex">\(B = 1~\text{T}\)</span></p>
-<p><strong>Solution:</strong></p>
+<h1 id="charged-particle-motion-in-electromagnetic-fields">Charged Particle Motion in Electromagnetic Fields</h1>
+<h2 id="scenario-1-circular-motion-pure-b-field">Scenario 1: Circular Motion (Pure B Field)</h2>
+<h3 id="physical-setup">Physical Setup</h3>
+<ul>
+<li><strong>Fields</strong>: </li>
+<li>Magnetic: <span class="arithmatex">\(\vec{B} = (0, 0, 0.5)\)</span> T (z-direction)</li>
+<li>Electric: <span class="arithmatex">\(\vec{E} = \vec{0}\)</span></li>
+<li><strong>Initial Conditions</strong>: </li>
+<li>Position: <span class="arithmatex">\(\vec{r}_0 = (0, 0, 0)\)</span> m</li>
+<li>Velocity: <span class="arithmatex">\(\vec{v}_0 = (2.0, 0, 0)\)</span> m/s (perpendicular to B)</li>
+</ul>
+<h3 id="theory">Theory</h3>
+<p>The particle executes circular motion with:
+- Cyclotron radius: <span class="arithmatex">\(r = \frac{mv_\perp}{qB} = \frac{0.01 \times 2.0}{10^{-4} \times 0.5} = 0.4\)</span> m
+- Cyclotron period: <span class="arithmatex">\(T = \frac{2\pi m}{qB} \approx 1.26\)</span> s</p>
+<h3 id="key-characteristics">Key Characteristics</h3>
 <ol>
-<li>
-<p>Larmor Radius:
-$$
-r_L = \frac{10^{-3} \cdot 1}{1 \cdot 1} = 10^{-3}~\text{m}
-$$</p>
-</li>
-<li>
-<p>Cyclotron Frequency:
-$$
-\omega_c = \frac{1 \cdot 1}{10^{-3}} = 1000~\text{rad/s}
-$$</p>
-</li>
+<li>Planar motion in x-y plane</li>
+<li>Constant speed <span class="arithmatex">\(v_\perp = 2.0\)</span> m/s</li>
+<li>Radius matches theoretical prediction:</li>
 </ol>
 <hr/>
-<h2 id="simulated-scenarios">Simulated Scenarios</h2>
+<h2 id="scenario-2-helical-motion-added-axial-velocity">Scenario 2: Helical Motion (Added Axial Velocity)</h2>
+<h3 id="physical-setup_1">Physical Setup</h3>
+<ul>
+<li><strong>Fields</strong>: Same as Scenario 1</li>
+<li><strong>Initial Conditions</strong>: </li>
+<li><span class="arithmatex">\(\vec{v}_0 = (2.0, 0, 1.5)\)</span> m/s (added z-component)</li>
+</ul>
+<h3 id="theory_1">Theory</h3>
+<p>Superposition of:
+1. Circular motion in x-y plane (<span class="arithmatex">\(v_\perp = 2.0\)</span> m/s)
+2. Uniform motion along z-axis (<span class="arithmatex">\(v_\parallel = 1.5\)</span> m/s)</p>
+<p>Pitch distance: <span class="arithmatex">\(p = v_\parallel \cdot T \approx 1.5 \times 1.26 \approx 1.89\)</span> m</p>
+<hr/>
+<h2 id="scenario-3-eb-drift-crossed-fields">Scenario 3: E×B Drift (Crossed Fields)</h2>
+<h3 id="physical-setup_2">Physical Setup</h3>
+<ul>
+<li><strong>Fields</strong>:</li>
+<li><span class="arithmatex">\(\vec{E} = (1.0, 0, 0)\)</span> V/m</li>
+<li><span class="arithmatex">\(\vec{B} = (0, 0, 0.5)\)</span> T</li>
+<li><strong>Initial Conditions</strong>: <span class="arithmatex">\(\vec{v}_0 = \vec{0}\)</span></li>
+</ul>
+<h3 id="theory_2">Theory</h3>
+<p>Drift velocity given by:
+<span class="arithmatex">\(<span class="arithmatex">\(\vec{v}_E = \frac{\vec{E} \times \vec{B}}{B^2} = (0, 2.0, 0) \text{ m/s}\)</span>\)</span></p>
+<p>Expected trajectory:
+1. Initial acceleration in x-direction
+2. Curved transition phase
+3. Steady drift in y-direction</p>
+<h2 id="comparative-analysis">Comparative Analysis</h2>
 <table>
 <thead>
 <tr>
 <th>Scenario</th>
-<th>Initial Conditions</th>
-<th>Expected Motion</th>
+<th>Field Configuration</th>
+<th>Motion Type</th>
+<th>Characteristic Velocity</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Circular</strong></td>
-<td><span class="arithmatex">\(\mathbf{v} \perp \mathbf{B}\)</span> only</td>
-<td>Particle loops in plane</td>
+<td>Circular</td>
+<td>Pure B</td>
+<td>Planar</td>
+<td><span class="arithmatex">\(v_\perp\)</span> only</td>
 </tr>
 <tr>
-<td><strong>Spiral in <span class="arithmatex">\(z\)</span></strong></td>
-<td><span class="arithmatex">\(\mathbf{v}\)</span> has <span class="arithmatex">\(v_z\)</span> component, <span class="arithmatex">\(\mathbf{B} = B_z\)</span></td>
-<td>Helix around <span class="arithmatex">\(z\)</span>-axis</td>
+<td>Helical</td>
+<td>Pure B</td>
+<td>3D spiral</td>
+<td><span class="arithmatex">\(v_\perp + v_\parallel\)</span></td>
 </tr>
 <tr>
-<td><strong>Drift Motion</strong></td>
-<td><span class="arithmatex">\(\mathbf{E} \perp \mathbf{B}\)</span></td>
-<td>Uniform drift</td>
+<td>E×B Drift</td>
+<td>Crossed E and B</td>
+<td>Curved drift</td>
+<td><span class="arithmatex">\(v_E = E/B\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Visualizations for each are in the <a href="../notebooks/lorentz_simulation.ipynb">simulation notebook</a>.</p>
-<hr/>
-<h2 id="hints">💬 Hints</h2>
-<ul>
-<li>Use larger <span class="arithmatex">\(q\)</span> and <span class="arithmatex">\(m\)</span> for macroscopic scale motion</li>
-<li>Start with circular motion</li>
-<li>Introduce axial velocity for helices</li>
-<li>Add electric field for drift behavior</li>
-</ul>
+<h2 id="scenario-1-circular-motion-pure-b-field_1">Scenario 1: Circular Motion (Pure B Field)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="alt text" src="../circular_motion.gif"/></th>
+<th style="text-align: center;"><img alt="alt text" src="../image.png"/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="scenario-2-helical-motion-added-axial-velocity_1">Scenario 2: Helical Motion (Added Axial Velocity)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="alt text" src="../helical_motion.gif"/></th>
+<th style="text-align: center;"><img alt="alt text" src="../image-1.png"/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="scenario-3-eb-drift-crossed-fields_1">Scenario 3: E×B Drift (Crossed Fields)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="alt text" src="../exb_drift.gif"/></th>
+<th style="text-align: center;"><img alt="alt text" src="../image-2.png"/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Visualizations for each are in the <a href="https://colab.research.google.com/drive/1xKfLyHu_g3Ok0v1teVgerG4qRpZNWKgG?authuser=1#scrollTo=dZHomL-rZeLJ">Google Colab</a>.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
