@@ -85,11 +85,23 @@ The particle executes circular motion with:
   - $\vec{v}_0 = (2.0, 0, 1.5)$ m/s (added z-component)
 
 ### Theory
-Superposition of:
-1. Circular motion in x-y plane ($v_\perp = 2.0$ m/s)
-2. Uniform motion along z-axis ($v_\parallel = 1.5$ m/s)
 
-Pitch distance: $p = v_\parallel \cdot T \approx 1.5 \times 1.26 \approx 1.89$ m
+Superposition of:
+
+1. Circular motion in x-y plane  
+
+   ($v_\perp = 2.0$ m/s)
+
+2. Uniform motion along z-axis  
+
+   ($v_\parallel = 1.5$ m/s)
+
+Pitch distance:
+
+$$
+p = v_\parallel \cdot T \approx 1.5 \times 1.26 \approx 1.89\ \text{m}
+$$
+
 
 
 
