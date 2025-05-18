@@ -63,9 +63,18 @@ $$
   - Velocity: $\vec{v}_0 = (2.0, 0, 0)$ m/s (perpendicular to B)
 
 ### Theory
+
 The particle executes circular motion with:
-- Cyclotron radius: $r = \frac{mv_\perp}{qB} = \frac{0.01 \times 2.0}{10^{-4} \times 0.5} = 0.4$ m
-- Cyclotron period: $T = \frac{2\pi m}{qB} \approx 1.26$ s
+
+- Cyclotron radius:  
+  $$
+  r = \frac{mv_\perp}{qB} = \frac{0.01 \times 2.0}{10^{-4} \times 0.5} = 0.4 \text{ m}
+  $$
+
+- Cyclotron period:  
+  $$
+  T = \frac{2\pi m}{qB} \approx 1.26 \text{ s}
+  $$
 
 
 
