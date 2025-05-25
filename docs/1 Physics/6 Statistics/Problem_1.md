@@ -49,7 +49,7 @@ $$
 ### Standard Error of the Mean
 
 $$
-SE(\bar{X}) = \frac{\sigma}{\sqrt{n}}
+E(\bar{X}) = \frac{\sigma}{\sqrt{n}}
 $$
 
 ### Z-Score for Sample Mean
