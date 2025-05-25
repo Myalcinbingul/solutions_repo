@@ -58,17 +58,32 @@ Reduce a resistor network to a single equivalent resistance between two terminal
 
 ---
 
-##  Python Code (Google Colab Compatible)
-
-```python
-
-````
 
 
+## Example 1: Simple Series-Parallel Circuit
 
+![alt text](image.png) |![alt text](image-1.png) |
+  |:-------------------------:|:-------------------------:|
 
+![alt text](image-2.png) |![alt text](image-3.png) |
+  |:-------------------------:|:-------------------------:|
 
-## 📈 Efficiency & Improvements
+## Example 2: Bridge Circuit
+
+![alt text](image-4.png) |![alt text](image-5.png) |
+  |:-------------------------:|:-------------------------:|
+
+![alt text](image-6.png) |![alt text](image-7.png) |
+  |:-------------------------:|:-------------------------:|
+
+## Example 3: Parallel then Series
+
+![alt text](image-8.png) |![alt text](image-9.png) |
+  |:-------------------------:|:-------------------------:|
+
+![alt text](image-10.png)
+
+##  Efficiency & Improvements
 
 * For arbitrary graphs, use DFS/BFS to detect cycles and paths.
 * Edge contractions and custom graph traversal rules improve performance.
