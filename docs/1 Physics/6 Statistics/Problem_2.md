@@ -5,10 +5,13 @@
 ##  Objective
 
 Estimate the value of $\pi$ using two classic Monte Carlo methods:
+
 1. Circle-based random point simulation.
+
+
 2. Buffon’s Needle experiment.
 
-This document explains the theory, implements simulations in Python, provides visualizations, and analyzes convergence.
+
 
 ---
 
@@ -54,9 +57,9 @@ $$
 
 ---
 
-## 🪡 Part 2: Buffon’s Needle Method
+##  Part 2: Buffon’s Needle Method
 
-### 🎓 Theoretical Foundation
+###  Theoretical Foundation
 
 Drop a needle of length $L$ onto a floor with parallel lines spaced $d$ units apart.
 
