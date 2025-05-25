@@ -172,6 +172,123 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="central-limit-theorem-exploring-through-simulations">Central Limit Theorem: Exploring Through Simulations</h1>
+<hr/>
+<h2 id="theoretical-background">Theoretical Background</h2>
+<h3 id="central-limit-theorem-definition">Central Limit Theorem Definition</h3>
+<p>The Central Limit Theorem is a fundamental concept in probability and statistics. It states that:  </p>
+<p>The <strong>sampling distribution</strong> of the <strong>sample mean</strong> approaches a <strong>normal distribution</strong> as the <strong>sample size</strong> increases, regardless of the shape of the population distribution.</p>
+<h3 id="formal-statement">Formal Statement</h3>
+<p>Let <span class="arithmatex">\(X_1, X_2, \ldots, X_n\)</span> be independent and identically distributed random variables with:</p>
+<ul>
+<li>Population mean: <span class="arithmatex">\(\mu\)</span></li>
+<li>Population variance: <span class="arithmatex">\(\sigma^2\)</span> (finite)</li>
+</ul>
+<p>Then, as <span class="arithmatex">\(n \to \infty\)</span>, the standardized sample mean converges in distribution to a standard normal distribution:</p>
+<div class="arithmatex">\[
+\frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \xrightarrow{d} N(0,1)
+\]</div>
+<p>where:</p>
+<div class="arithmatex">\[
+\bar{X}_n = \frac{1}{n}\sum_{i=1}^{n} X_i
+\]</div>
+<hr/>
+<h2 id="mathematical-definitions">Mathematical Definitions</h2>
+<h3 id="sample-mean">Sample Mean</h3>
+<div class="arithmatex">\[
+\bar{X}_n = \frac{1}{n}\sum_{i=1}^{n} X_i
+\]</div>
+<h3 id="sample-variance">Sample Variance</h3>
+<div class="arithmatex">\[
+S^2 = \frac{1}{n-1}\sum_{i=1}^{n}(X_i - \bar{X})^2
+\]</div>
+<h3 id="standard-error-of-the-mean">Standard Error of the Mean</h3>
+<div class="arithmatex">\[
+SE(\bar{X}) = \frac{\sigma}{\sqrt{n}}
+\]</div>
+<h3 id="z-score-for-sample-mean">Z-Score for Sample Mean</h3>
+<div class="arithmatex">\[
+Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}
+\]</div>
+<hr/>
+<h2 id="key-formulas">Key Formulas</h2>
+<h3 id="1-uniform-distribution">1. Uniform Distribution</h3>
+<ul>
+<li>PDF: <span class="arithmatex">\(f(x) = \frac{1}{b-a}\)</span> for <span class="arithmatex">\(a \leq x \leq b\)</span> </li>
+<li>Mean: <span class="arithmatex">\(\mu = \frac{a+b}{2}\)</span> </li>
+<li>Variance: <span class="arithmatex">\(\sigma^2 = \frac{(b-a)^2}{12}\)</span></li>
+</ul>
+<h3 id="2-exponential-distribution">2. Exponential Distribution</h3>
+<ul>
+<li>PDF: <span class="arithmatex">\(f(x) = \lambda e^{-\lambda x}\)</span> for <span class="arithmatex">\(x \geq 0\)</span> </li>
+<li>Mean: <span class="arithmatex">\(\mu = \frac{1}{\lambda}\)</span> </li>
+<li>Variance: <span class="arithmatex">\(\sigma^2 = \frac{1}{\lambda^2}\)</span></li>
+</ul>
+<h3 id="3-binomial-distribution">3. Binomial Distribution</h3>
+<ul>
+<li>PMF: <span class="arithmatex">\(P(X = k) = \binom{n}{k}p^k(1-p)^{n-k}\)</span> </li>
+<li>Mean: <span class="arithmatex">\(\mu = np\)</span> </li>
+<li>Variance: <span class="arithmatex">\(\sigma^2 = np(1-p)\)</span></li>
+</ul>
+<h3 id="convergence-properties">Convergence Properties</h3>
+<p>As sample size <span class="arithmatex">\(n\)</span> increases:</p>
+<ul>
+<li>Mean of sampling distribution: <span class="arithmatex">\(E[\bar{X}] = \mu\)</span> </li>
+<li>Variance of sampling distribution: <span class="arithmatex">\(Var[\bar{X}] = \frac{\sigma^2}{n}\)</span> </li>
+<li>Standard deviation: <span class="arithmatex">\(SD[\bar{X}] = \frac{\sigma}{\sqrt{n}}\)</span></li>
+</ul>
+<hr/>
+<h2 id="visualizations">Visualizations</h2>
+<p><img alt="alt text" src="../image.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<h2 id="understanding-the-central-limit-theorem-clt-from-the-visualizations">Understanding the Central Limit Theorem (CLT) from the Visualizations</h2>
+<h3 id="setup-summary">Setup Summary:</h3>
+<p>We simulate sampling distributions of the <strong>sample mean</strong> using:</p>
+<ul>
+<li><strong>Three population types</strong>:</li>
+<li><strong>Uniform(0, 1)</strong> — a flat, symmetric distribution.</li>
+<li><strong>Exponential(λ = 1)</strong> — a right-skewed distribution.</li>
+<li><strong>Binomial(n = 10, p = 0.3)</strong> — a discrete, slightly left-skewed distribution.</li>
+<li>Each population consists of <strong>100,000 values</strong>.</li>
+<li>From each population, we draw <strong>1,000 random samples</strong> at each of the following sample sizes:</li>
+<li><code>n = 5</code>, <code>n = 10</code>, <code>n = 30</code>, and <code>n = 50</code>.</li>
+<li>We calculate the <strong>mean</strong> of each sample and visualize the distribution of these sample means using histograms.</li>
+</ul>
+<hr/>
+<h3 id="what-the-visualizations-show">What the Visualizations Show:</h3>
+<ol>
+<li><strong>Shape Convergence</strong>:</li>
+<li>As the sample size <strong>increases</strong>, the distribution of sample means becomes increasingly <strong>bell-shaped and symmetric</strong>.</li>
+<li>
+<p>This happens even when the original population is <strong>skewed</strong> (e.g., Exponential).</p>
+</li>
+<li>
+<p><strong>Centering Around the Population Mean</strong>:</p>
+</li>
+<li>The <strong>red dashed line</strong> in each plot shows the <strong>true population mean (μ)</strong>.</li>
+<li>
+<p>Regardless of the population shape, the <strong>sampling distributions center</strong> around this true mean.</p>
+</li>
+<li>
+<p><strong>Spread Decreases with Larger Samples</strong>:</p>
+</li>
+<li>With larger sample sizes, the sample means <strong>cluster more tightly</strong> around the population mean.</li>
+<li>This reflects the decrease in <strong>standard error</strong>:<br/>
+     $$
+     \text{Standard Error} = \frac{\sigma}{\sqrt{n}}
+     $$</li>
+</ol>
+<hr/>
+<h3 id="key-takeaways">Key Takeaways:</h3>
+<p>The <strong>Central Limit Theorem</strong> guarantees that:
+- The <strong>distribution of sample means</strong> will approach a <strong>normal distribution</strong> as the sample size increases — <strong>regardless of the population's shape</strong>.
+- The sample mean is an <strong>unbiased estimator</strong> of the population mean.</p>
+<p>Even if the original population is <strong>skewed or discrete</strong>, the <strong>sampling distribution of the mean</strong> becomes more <strong>normal and centered</strong> as <code>n</code> increases.</p>
+<p><strong>Real-world importance</strong>:
+- In practice, this means that we can apply normal-based inference (confidence intervals, hypothesis tests) to sample means, even when the population isn't normal — <strong>as long as the sample size is large enough</strong>.</p>
+<hr/>
+<p><a href="https://colab.research.google.com/drive/1OMtNuOz3oFZAc3aPjXNYmsn3IxbSf50G?usp=sharing">Google Colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
