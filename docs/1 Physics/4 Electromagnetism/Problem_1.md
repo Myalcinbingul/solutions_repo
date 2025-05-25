@@ -167,7 +167,7 @@ Expected trajectory:
 ## Scenario 1: Circular Motion (Pure B Field)
 
 
-![alt text](circular_motion.gif) |![alt text](image.png) |
+![alt text](circular_motion.gif) | ![alt text](image-4.png) |
   |:-------------------------:|:-------------------------:|
 
 ## Scenario 2: Helical Motion (Added Axial Velocity)
@@ -177,7 +177,7 @@ Expected trajectory:
 
 ## Scenario 3: E×B Drift (Crossed Fields)
 
-![alt text](exb_drift.gif) |  ![alt text](image-2.png) |
+![alt text](exb_drift.gif) |  ![alt text](image-3.png) |
   |:-------------------------:|:-------------------------:|
 
 Visualizations for each are in the
