@@ -90,3 +90,4 @@ Reduce a resistor network to a single equivalent resistance between two terminal
 * Replace rule-based detection with symbolic solvers or matrix-based solvers for large circuits.
 
 
+ [Google Colab](https://colab.research.google.com/drive/1obDQDzBjN9ApNuOBuXs4oTD1PMvoBug0?usp=sharing)
