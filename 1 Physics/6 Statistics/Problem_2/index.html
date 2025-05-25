@@ -174,10 +174,15 @@
 <h1 id="problem-2">Problem 2</h1>
 <h1 id="estimating-pi-using-monte-carlo-methods">Estimating <span class="arithmatex">\(\pi\)</span> Using Monte Carlo Methods</h1>
 <h2 id="objective">Objective</h2>
-<p>Estimate the value of <span class="arithmatex">\(\pi\)</span> using two classic Monte Carlo methods:
-1. Circle-based random point simulation.
-2. Buffon’s Needle experiment.</p>
-<p>This document explains the theory, implements simulations in Python, provides visualizations, and analyzes convergence.</p>
+<p>Estimate the value of <span class="arithmatex">\(\pi\)</span> using two classic Monte Carlo methods:</p>
+<ol>
+<li>
+<p>Circle-based random point simulation.</p>
+</li>
+<li>
+<p>Buffon’s Needle experiment.</p>
+</li>
+</ol>
 <hr/>
 <h2 id="part-1-circle-based-monte-carlo-estimation">Part 1: Circle-Based Monte Carlo Estimation</h2>
 <h3 id="theoretical-foundation">Theoretical Foundation</h3>
@@ -212,8 +217,8 @@ A_{\text{square}} = (2r)^2 = 4
 <li>Convergence is slow: many points are needed for high precision.</li>
 </ul>
 <hr/>
-<h2 id="part-2-buffons-needle-method">🪡 Part 2: Buffon’s Needle Method</h2>
-<h3 id="theoretical-foundation_1">🎓 Theoretical Foundation</h3>
+<h2 id="part-2-buffons-needle-method">Part 2: Buffon’s Needle Method</h2>
+<h3 id="theoretical-foundation_1">Theoretical Foundation</h3>
 <p>Drop a needle of length <span class="arithmatex">\(L\)</span> onto a floor with parallel lines spaced <span class="arithmatex">\(d\)</span> units apart.</p>
 <ul>
 <li>If <span class="arithmatex">\(L \leq d\)</span>, the probability of the needle crossing a line is:</li>
