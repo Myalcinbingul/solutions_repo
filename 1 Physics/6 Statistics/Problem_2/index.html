@@ -172,6 +172,112 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="estimating-pi-using-monte-carlo-methods">Estimating <span class="arithmatex">\(\pi\)</span> Using Monte Carlo Methods</h1>
+<h2 id="objective">Objective</h2>
+<p>Estimate the value of <span class="arithmatex">\(\pi\)</span> using two classic Monte Carlo methods:
+1. Circle-based random point simulation.
+2. Buffon’s Needle experiment.</p>
+<p>This document explains the theory, implements simulations in Python, provides visualizations, and analyzes convergence.</p>
+<hr/>
+<h2 id="part-1-circle-based-monte-carlo-estimation">Part 1: Circle-Based Monte Carlo Estimation</h2>
+<h3 id="theoretical-foundation">Theoretical Foundation</h3>
+<p>We generate random points in a square and count how many fall inside a circle.</p>
+<ul>
+<li>For a <strong>unit circle</strong> of radius <span class="arithmatex">\( r = 1 \)</span>, the <strong>area</strong> is:</li>
+</ul>
+<div class="arithmatex">\[
+A_{\text{circle}} = \pi r^2 = \pi
+\]</div>
+<ul>
+<li>The square enclosing the unit circle (from <span class="arithmatex">\((-1, -1)\)</span> to <span class="arithmatex">\((1, 1)\)</span>) has area:</li>
+</ul>
+<div class="arithmatex">\[
+A_{\text{square}} = (2r)^2 = 4
+\]</div>
+<ul>
+<li>The <strong>ratio</strong> of points inside the circle to the total number of points approximates the ratio of their areas:</li>
+</ul>
+<div class="arithmatex">\[
+\frac{\text{Points inside circle}}{\text{Total points}} \approx \frac{\pi}{4}
+\]</div>
+<p>Thus, we estimate:</p>
+<div class="arithmatex">\[
+\pi \approx 4 \cdot \frac{\text{Points inside circle}}{\text{Total points}}
+\]</div>
+<hr/>
+<h3 id="observations">Observations</h3>
+<ul>
+<li>Accuracy increases with larger sample size.</li>
+<li>Method is simple, visual, and intuitive.</li>
+<li>Convergence is slow: many points are needed for high precision.</li>
+</ul>
+<hr/>
+<h2 id="part-2-buffons-needle-method">🪡 Part 2: Buffon’s Needle Method</h2>
+<h3 id="theoretical-foundation_1">🎓 Theoretical Foundation</h3>
+<p>Drop a needle of length <span class="arithmatex">\(L\)</span> onto a floor with parallel lines spaced <span class="arithmatex">\(d\)</span> units apart.</p>
+<ul>
+<li>If <span class="arithmatex">\(L \leq d\)</span>, the probability of the needle crossing a line is:</li>
+</ul>
+<div class="arithmatex">\[
+P = \frac{2L}{d \pi}
+\]</div>
+<p>Rearranging the probability formula gives:</p>
+<div class="arithmatex">\[
+\pi \approx \frac{2 L \cdot N}{d \cdot C}
+\]</div>
+<p>Where:<br/>
+- <span class="arithmatex">\(N\)</span> = total number of drops<br/>
+- <span class="arithmatex">\(C\)</span> = number of times the needle crosses a line  </p>
+<hr/>
+<h3 id="circle-method-point-distribution">Circle Method - Point Distribution:</h3>
+<p><img alt="alt text" src="../monte_carlo_pi_long%20%281%29.gif"/>
+<img alt="alt text" src="../image-3.png"/></p>
+<h3 id="buffons-needle-convergence-analysis">Buffon's Needle - Convergence Analysis:</h3>
+<p><img alt="alt text" src="../buffon_needle_pi.gif"/>
+<img alt="alt text" src="../image-4.png"/></p>
+<h3 id="method-comparison">Method Comparison:</h3>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<hr/>
+<h3 id="convergence-and-comments">Convergence and Comments</h3>
+<ul>
+<li>Slower convergence than the circle method.</li>
+<li>Larger variance due to probabilistic condition.</li>
+<li>Computationally interesting but not as efficient for π estimation.</li>
+</ul>
+<hr/>
+<h2 id="comparison-summary">Comparison Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Formula</th>
+<th>Convergence</th>
+<th>Visual Appeal</th>
+<th>Accuracy (modest N)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circle Method</td>
+<td><span class="arithmatex">\(\pi \approx 4 \cdot \frac{M}{N}\)</span></td>
+<td>Faster</td>
+<td>High</td>
+<td>Good</td>
+</tr>
+<tr>
+<td>Buffon’s Needle</td>
+<td><span class="arithmatex">\(\pi \approx \frac{2L \cdot N}{d \cdot C}\)</span></td>
+<td>Slower</td>
+<td>Medium</td>
+<td>Noisy estimates</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>Monte Carlo methods elegantly demonstrate the power of randomness in numerical computation. Both approaches estimate π using probabilistic geometry. The circle-based method is faster and more reliable, while Buffon’s needle is historically rich and conceptually unique.</p>
+<hr/>
+<p><a href="https://colab.research.google.com/drive/1he_V67JIMCwsvfEs5QM3-73DwOQDepod?usp=sharing">Google Colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
