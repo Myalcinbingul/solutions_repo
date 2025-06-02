@@ -60,18 +60,15 @@ Reduce a resistor network to a single equivalent resistance between two terminal
 
 
 
+
 ## Example 1: Parallel then Series
-
-![alt text](image-11.png)
-
-## Example 2: 
 
 ![alt text](image-8.png) |![alt text](image-9.png) |
   |:-------------------------:|:-------------------------:|
 
 ![alt text](image-10.png)
 
-## Example 3: 
+## Example 2: 
 
 
 ![alt text](image-12.png) |![alt text](image-13.png) |
