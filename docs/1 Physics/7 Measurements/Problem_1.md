@@ -282,6 +282,8 @@ $$
 
 ---
 
+![alt text](image-2.png)
+
 ## Student Notes
 
 > *"I tied my bracelet to a string about 25 cm long, then let it swing and timed 10 full oscillations. The results varied a bit, but averaged around 14 second — close to the predicted value."*
@@ -384,4 +386,4 @@ With careful technique:
 
 
 ---
- [Google Colab](https://colab.research.google.com/drive/1OMtNuOz3oFZAc3aPjXNYmsn3IxbSf50G?usp=sharing)
+ [Google Colab](https://colab.research.google.com/drive/1_rwrpQyiXT28HlC6BysdEXBGo019HMCU?usp=sharing)
