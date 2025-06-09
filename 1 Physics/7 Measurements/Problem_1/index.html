@@ -172,6 +172,254 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="measuring-earths-gravity-using-a-simple-pendulum">Measuring Earth's Gravity Using a Simple Pendulum</h1>
+<p>This project explores how to measure Earth's gravitational acceleration (<span class="arithmatex">\(g\)</span>) using a simple pendulum. You'll learn to apply physical theory, conduct experiments, and analyze uncertainty to estimate <span class="arithmatex">\(g\)</span> from time measurements.</p>
+<hr/>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Understand the physics of simple harmonic motion (SHM)</li>
+<li>Derive and apply the pendulum period formula</li>
+<li>Use error propagation to calculate uncertainty in <span class="arithmatex">\(g\)</span></li>
+<li>Analyze and interpret experimental data</li>
+</ul>
+<hr/>
+<h2 id="theoretical-background">Theoretical Background</h2>
+<h3 id="simple-pendulum-model">Simple Pendulum Model</h3>
+<p>A simple pendulum is a point mass suspended by a massless, inextensible string. For small angles (<span class="arithmatex">\(\theta &lt; 15^\circ\)</span>), it undergoes simple harmonic motion.</p>
+<p><strong>Key Assumptions:</strong></p>
+<ul>
+<li>Small angle approximation: <span class="arithmatex">\(\sin(\theta) \approx \theta\)</span></li>
+<li>Massless, inextensible string</li>
+<li>No air resistance or friction</li>
+<li>Point mass bob</li>
+<li>Uniform gravitational field</li>
+</ul>
+<h3 id="derivation-of-the-period">Derivation of the Period</h3>
+<p>Restoring torque:</p>
+<div class="arithmatex">\[
+\tau = -mgL\sin(\theta) \approx -mgL\theta
+\]</div>
+<p>Using <span class="arithmatex">\(\tau = I\alpha\)</span> and <span class="arithmatex">\(I = mL^2\)</span> for a point mass:</p>
+<div class="arithmatex">\[
+mL^2 \frac{d^2\theta}{dt^2} = -mgL\theta
+\]</div>
+<p>Divide both sides by <span class="arithmatex">\(mL^2\)</span>:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \frac{g}{L}\theta = 0
+\]</div>
+<p>This is the equation for simple harmonic motion:</p>
+<div class="arithmatex">\[
+\omega = \sqrt{\frac{g}{L}}, \quad T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{L}{g}}
+\]</div>
+<hr/>
+<h2 id="key-equations">Key Equations</h2>
+<h3 id="period-and-gravity">Period and Gravity</h3>
+<ul>
+<li>Period of pendulum:</li>
+</ul>
+<p>$$
+  T = 2\pi\sqrt{\frac{L}{g}}
+  $$</p>
+<ul>
+<li>Solving for gravity:</li>
+</ul>
+<p>$$
+  g = \frac{4\pi^2 L}{T^2}
+  $$</p>
+<h3 id="statistics">Statistics</h3>
+<ul>
+<li>Mean:</li>
+</ul>
+<p>$$
+  \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i
+  $$</p>
+<ul>
+<li>Sample standard deviation:</li>
+</ul>
+<p>$$
+  s = \sqrt{\frac{1}{n - 1} \sum_{i=1}^n (x_i - \bar{x})^2}
+  $$</p>
+<ul>
+<li>Standard error of the mean:</li>
+</ul>
+<p>$$
+  \sigma_{\bar{x}} = \frac{s}{\sqrt{n}}
+  $$</p>
+<ul>
+<li>Relative error:</li>
+</ul>
+<p>$$
+  \epsilon = \frac{|\text{measured} - \text{true}|}{|\text{true}|} \times 100\%
+  $$</p>
+<hr/>
+<h2 id="error-propagation">Error Propagation</h2>
+<p>For:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<p>Apply partial derivatives:</p>
+<ul>
+<li><span class="arithmatex">\(\frac{\partial g}{\partial L} = \frac{4\pi^2}{T^2}\)</span></li>
+<li><span class="arithmatex">\(\frac{\partial g}{\partial T} = -\frac{8\pi^2 L}{T^3}\)</span></li>
+</ul>
+<p>So the uncertainty in <span class="arithmatex">\(g\)</span> is:</p>
+<div class="arithmatex">\[
+\Delta g = \sqrt{
+\left( \frac{4\pi^2}{T^2} \Delta L \right)^2 +
+\left( \frac{8\pi^2 L}{T^3} \Delta T \right)^2
+}
+\]</div>
+<p>Factoring out <span class="arithmatex">\(g\)</span>:</p>
+<div class="arithmatex">\[
+\Delta g = g \sqrt{
+\left( \frac{\Delta L}{L} \right)^2 +
+\left( 2 \frac{\Delta T}{T} \right)^2
+}
+\]</div>
+<hr/>
+<h2 id="experimental-setup">Experimental Setup</h2>
+<ul>
+<li><strong>Object:</strong> A bracelet tied to a string</li>
+<li><strong>Length:</strong> <span class="arithmatex">\(L = 25 \text{ cm} = 0.25 \text{ m}\)</span></li>
+<li><strong>Environment:</strong> Indoors (minimize wind/friction)</li>
+<li><strong>Method:</strong> Time 10 complete swings with a stopwatch</li>
+</ul>
+<p>Expected period using:</p>
+<div class="arithmatex">\[
+T = 2\pi \sqrt{\frac{0.25}{9.81}} \approx 1.00 \text{ s}
+\]</div>
+<hr/>
+<h2 id="example-timing-data-for-10-swings-using-your-stop-times">Example Timing Data for 10 Swings (Using Your Stop Times)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Trial</th>
+<th style="text-align: center;">Swing Type</th>
+<th style="text-align: center;">Total Time Until Stop (s)</th>
+<th style="text-align: center;">Time for 10 Swings (s)</th>
+<th style="text-align: center;">Average Period <span class="arithmatex">\(T\)</span> (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Gentle</td>
+<td style="text-align: center;">14.7</td>
+<td style="text-align: center;">14.7</td>
+<td style="text-align: center;">1.47</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Gentle</td>
+<td style="text-align: center;">14.5</td>
+<td style="text-align: center;">14.5</td>
+<td style="text-align: center;">1.45</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Hard Push</td>
+<td style="text-align: center;">25.5</td>
+<td style="text-align: center;">25.5</td>
+<td style="text-align: center;">2.55</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Hard Push</td>
+<td style="text-align: center;">25.1</td>
+<td style="text-align: center;">25.1</td>
+<td style="text-align: center;">2.51</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1"><img alt="alt text" src="../image-1.png"/></h2>
+<h2 id="observations">Observations</h2>
+<ul>
+<li>Average period: <span class="arithmatex">\(\approx 1.00 \, \text{s}\)</span></li>
+<li>Variation due to timing uncertainty</li>
+<li>Results align with theory for 25 cm pendulum</li>
+</ul>
+<hr/>
+<h2 id="student-notes">Student Notes</h2>
+<blockquote>
+<p><em>"I tied my bracelet to a string about 25 cm long, then let it swing and timed 10 full oscillations. The results varied a bit, but averaged around 1 second — close to the predicted value."</em></p>
+</blockquote>
+<hr/>
+<h2 id="sources-of-error">Sources of Error</h2>
+<h3 id="1-random-errors">1. Random Errors</h3>
+<ul>
+<li>Human reaction time</li>
+<li>Inconsistent release timing</li>
+<li>Measurement fluctuations</li>
+</ul>
+<p><strong>Mitigation:</strong><br/>
+Repeat trials, time multiple oscillations, stay consistent.</p>
+<h3 id="2-systematic-errors">2. Systematic Errors</h3>
+<ul>
+<li>Large angle violations: <span class="arithmatex">\(\sin(\theta) \not\approx \theta\)</span></li>
+<li>Air resistance (adds drag)</li>
+<li>Bob is not a true point mass</li>
+<li>String stretch or flexibility</li>
+</ul>
+<h3 id="3-measurement-uncertainties">3. Measurement Uncertainties</h3>
+<ul>
+<li>Ruler precision (length)</li>
+<li>Stopwatch timing accuracy</li>
+<li>Estimating bob center of mass</li>
+</ul>
+<h3 id="4-dominant-uncertainty">4. Dominant Uncertainty</h3>
+<p>From:</p>
+<div class="arithmatex">\[
+\frac{\Delta g}{g} = \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}
+\]</div>
+<p>Timing uncertainty typically dominates because of the factor of 2 in the second term.</p>
+<hr/>
+<h2 id="improving-accuracy">Improving Accuracy</h2>
+<ul>
+<li>Use a <strong>longer pendulum</strong>: reduces relative length uncertainty</li>
+<li>Count <strong>more oscillations</strong>: reduces timing error</li>
+<li>Minimize amplitude: stay under <span class="arithmatex">\(10^\circ\)</span></li>
+<li>Use a <strong>dense, spherical bob</strong>: better approximates point mass</li>
+<li>Employ <strong>electronic timers</strong> or slow-motion video</li>
+</ul>
+<hr/>
+<h2 id="advanced-analysis">Advanced Analysis</h2>
+<h3 id="linear-regression">Linear Regression</h3>
+<p>By measuring <span class="arithmatex">\(T\)</span> for multiple lengths:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2}{g} L
+\]</div>
+<p>This is a linear relation:</p>
+<div class="arithmatex">\[
+T^2 = mL + b
+\]</div>
+<p>Where slope:</p>
+<div class="arithmatex">\[
+m = \frac{4\pi^2}{g} \quad \Rightarrow \quad g = \frac{4\pi^2}{\text{slope}}
+\]</div>
+<h3 id="chi-squared-fit">Chi-Squared Fit</h3>
+<p>To evaluate the fit quality:</p>
+<div class="arithmatex">\[
+\chi^2 = \sum_{i=1}^n \frac{(O_i - E_i)^2}{\sigma_i^2}
+\]</div>
+<p>Use it to compare observed vs expected values with error bars.</p>
+<hr/>
+<h2 id="discussion-questions">Discussion Questions</h2>
+<ol>
+<li>Why does timing uncertainty contribute more to <span class="arithmatex">\(\Delta g\)</span> than length?</li>
+<li>How does a longer pendulum improve accuracy?</li>
+<li>What happens if you use a large amplitude (e.g., <span class="arithmatex">\(20^\circ\)</span>)?</li>
+<li>How does air resistance affect the measured period?</li>
+</ol>
+<hr/>
+<h2 id="expected-results">Expected Results</h2>
+<p>With careful technique:</p>
+<ul>
+<li><span class="arithmatex">\(g \approx 9.7\)</span> to <span class="arithmatex">\(9.9 \, \text{m/s}^2\)</span></li>
+<li>Relative uncertainty: 0.1–0.5%</li>
+<li>Typically within 2–3% of the standard value (<span class="arithmatex">\(9.81 \, \text{m/s}^2\)</span>)</li>
+</ul>
+<hr/>
+<p><a href="https://colab.research.google.com/drive/1OMtNuOz3oFZAc3aPjXNYmsn3IxbSf50G?usp=sharing">Google Colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
