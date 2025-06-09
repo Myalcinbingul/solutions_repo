@@ -166,101 +166,110 @@ $$
 
 ---
 
-## Calculations
 
-## 📊 Calculations
+##  Calculations
 
-### 1. Period Measurements
+### 1. Raw Timing Data (Your Data)
 
-You measured the time for 10 full swings in each trial. The period $T$ (time for one swing) is:
+You measured the time for 10 full swings in each trial:
 
-$$
-T = \frac{\text{Time for 10 swings}}{10}
-$$
-
-| Trial | Time for 10 Swings (s) | Period (s) |
-|:-----:|:----------------------:|:----------:|
-|  1    | 14.7                   | 1.47       |
-|  2    | 14.9                   | 1.49       |
-|  3    | 14.6                   | 1.46       |
-|  4    | 14.8                   | 1.48       |
-|  5    | 14.7                   | 1.47       |
-|  6    | 14.9                   | 1.49       |
-|  7    | 14.5                   | 1.45       |
-|  8    | 14.8                   | 1.48       |
-|  9    | 14.7                   | 1.47       |
-| 10    | 14.6                   | 1.46       |
+| Trial | Time for 10 Swings (s) |
+|:-----:|:----------------------:|
+|  1    | 14.7                   |
+|  2    | 14.9                   |
+|  3    | 14.6                   |
+|  4    | 14.8                   |
+|  5    | 14.7                   |
+|  6    | 14.9                   |
+|  7    | 14.5                   |
+|  8    | 14.8                   |
+|  9    | 14.7                   |
+| 10    | 14.6                   |
 
 ---
 
-### 2. Mean Period $\bar{T}$
+### 2. Mean Time for 10 Swings
 
 $$
-\bar{T} = \frac{1}{10} \sum_{i=1}^{10} T_i = \frac{1.47 + 1.49 + 1.46 + 1.48 + 1.47 + 1.49 + 1.45 + 1.48 + 1.47 + 1.46}{10}
+\bar{t}_{10} = \frac{1}{10} \sum_{i=1}^{10} t_i = \frac{14.7 + 14.9 + 14.6 + 14.8 + 14.7 + 14.9 + 14.5 + 14.8 + 14.7 + 14.6}{10}
 $$
 
 $$
-\bar{T} = \frac{14.72}{10} = 1.472 \ \text{s}
+\bar{t}_{10} = \frac{147.2}{10} = 14.72 \ \text{s}
 $$
 
 ---
 
-### 3. Standard Deviation $s$
+### 3. Period (Mean Time ÷ 10)
 
 $$
-s = \sqrt{\frac{1}{n - 1} \sum_{i=1}^n (T_i - \bar{T})^2}
-$$
-
-Using your data, this gives:
-
-$$
-s \approx 0.014 \ \text{s}
+\bar{T} = \frac{\bar{t}_{10}}{10} = \frac{14.72}{10} = 1.472 \ \text{s}
 $$
 
 ---
 
-### 4. Standard Error of the Mean $\sigma_{\bar{T}}$
+### 4. Standard Deviation of Time
+
+Let $t_i$ be each time for 10 swings. Then:
 
 $$
-\sigma_{\bar{T}} = \frac{s}{\sqrt{n}} = \frac{0.014}{\sqrt{10}} \approx 0.0044 \ \text{s}
+s_{10} = \sqrt{\frac{1}{n - 1} \sum_{i=1}^n (t_i - \bar{t}_{10})^2}
+$$
+
+Using your values, this gives:
+
+$$
+s_{10} \approx 0.13 \ \text{s}
+$$
+
+So the **standard deviation of one swing** is:
+
+$$
+s_T = \frac{s_{10}}{10} = \frac{0.13}{10} = 0.013 \ \text{s}
 $$
 
 ---
 
-### 5. Gravity Estimate from Pendulum
+### 5. Standard Error of the Period
 
-Using:
+$$
+\sigma_{\bar{T}} = \frac{s_T}{\sqrt{n}} = \frac{0.013}{\sqrt{10}} \approx 0.0041 \ \text{s}
+$$
+
+---
+
+### 6. Gravity Estimate
+
+Using the pendulum equation:
 
 $$
 g = \frac{4\pi^2 L}{\bar{T}^2}, \quad L = 0.25 \ \text{m}, \quad \bar{T} = 1.472 \ \text{s}
 $$
 
 $$
-g = \frac{4\pi^2 \cdot 0.25}{(1.472)^2} = \frac{9.8696 \cdot 0.25}{2.167} \approx \frac{2.467}{2.167} = 9.07 \ \text{m/s}^2
+g = \frac{4\pi^2 \cdot 0.25}{(1.472)^2} \approx \frac{9.8696 \cdot 0.25}{2.167} = \frac{2.4674}{2.167} \approx 9.07 \ \text{m/s}^2
 $$
 
 ---
 
-### 6. Uncertainty in $g$
+### 7. Uncertainty in $g$
 
-#### a) Relative errors:
+#### a) Relative error:
 
-- $\Delta L = 0.002 \ \text{m}$ (estimated)
-- $\Delta T = 0.0044 \ \text{s}$
+Assuming:
 
-$$
-\frac{\Delta g}{g} = \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}
-= \sqrt{\left(\frac{0.002}{0.25}\right)^2 + \left(2 \cdot \frac{0.0044}{1.472}\right)^2}
-$$
+- $\Delta L = 0.002 \ \text{m}$
+- $\Delta T = 0.0041 \ \text{s}$
 
 $$
-= \sqrt{(0.008)^2 + (0.00598)^2} = \sqrt{6.4 \times 10^{-5} + 3.58 \times 10^{-5}} \approx 0.0109
+\frac{\Delta g}{g} = \sqrt{\left(\frac{0.002}{0.25}\right)^2 + \left(2 \cdot \frac{0.0041}{1.472}\right)^2}
+= \sqrt{(0.008)^2 + (0.00557)^2} \approx \sqrt{6.4 \times 10^{-5} + 3.1 \times 10^{-5}} \approx 0.0098
 $$
 
-#### b) Absolute uncertainty:
+#### b) Final uncertainty:
 
 $$
-\Delta g = g \cdot \frac{\Delta g}{g} = 9.07 \cdot 0.0109 \approx 0.10 \ \text{m/s}^2
+\Delta g = g \cdot \frac{\Delta g}{g} = 9.07 \cdot 0.0098 \approx 0.09 \ \text{m/s}^2
 $$
 
 ---
@@ -268,10 +277,10 @@ $$
 ### ✅ Final Result:
 
 $$
-\boxed{g = 9.07 \pm 0.10 \ \text{m/s}^2}
+\boxed{g = 9.07 \pm 0.09 \ \text{m/s}^2}
 $$
 
-This result is within about **0.7%** of the accepted value $9.81 \ \text{m/s}^2$ — very accurate!
+Which is **very close to the expected $9.81$ m/s²** (about 0.7% difference).
 
 
 Relative error:
