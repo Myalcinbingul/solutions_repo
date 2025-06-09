@@ -353,128 +353,121 @@ T = 2\pi \sqrt{\frac{0.25}{9.81}} \approx 1.00 \text{ s}
 </table>
 <hr/>
 <h2 id="calculations">Calculations</h2>
-<h2 id="calculations_1">📊 Calculations</h2>
-<h3 id="1-period-measurements">1. Period Measurements</h3>
-<p>You measured the time for 10 full swings in each trial. The period <span class="arithmatex">\(T\)</span> (time for one swing) is:</p>
-<div class="arithmatex">\[
-T = \frac{\text{Time for 10 swings}}{10}
-\]</div>
+<h3 id="1-raw-timing-data-your-data">1. Raw Timing Data (Your Data)</h3>
+<p>You measured the time for 10 full swings in each trial:</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">Trial</th>
 <th style="text-align: center;">Time for 10 Swings (s)</th>
-<th style="text-align: center;">Period (s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">14.7</td>
-<td style="text-align: center;">1.47</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">14.9</td>
-<td style="text-align: center;">1.49</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">14.6</td>
-<td style="text-align: center;">1.46</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">14.8</td>
-<td style="text-align: center;">1.48</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">14.7</td>
-<td style="text-align: center;">1.47</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">14.9</td>
-<td style="text-align: center;">1.49</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: center;">14.5</td>
-<td style="text-align: center;">1.45</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">14.8</td>
-<td style="text-align: center;">1.48</td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
 <td style="text-align: center;">14.7</td>
-<td style="text-align: center;">1.47</td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
 <td style="text-align: center;">14.6</td>
-<td style="text-align: center;">1.46</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<h3 id="2-mean-period-bart">2. Mean Period <span class="arithmatex">\(\bar{T}\)</span></h3>
+<h3 id="2-mean-time-for-10-swings">2. Mean Time for 10 Swings</h3>
 <div class="arithmatex">\[
-\bar{T} = \frac{1}{10} \sum_{i=1}^{10} T_i = \frac{1.47 + 1.49 + 1.46 + 1.48 + 1.47 + 1.49 + 1.45 + 1.48 + 1.47 + 1.46}{10}
+\bar{t}_{10} = \frac{1}{10} \sum_{i=1}^{10} t_i = \frac{14.7 + 14.9 + 14.6 + 14.8 + 14.7 + 14.9 + 14.5 + 14.8 + 14.7 + 14.6}{10}
 \]</div>
 <div class="arithmatex">\[
-\bar{T} = \frac{14.72}{10} = 1.472 \ \text{s}
-\]</div>
-<hr/>
-<h3 id="3-standard-deviation-s">3. Standard Deviation <span class="arithmatex">\(s\)</span></h3>
-<div class="arithmatex">\[
-s = \sqrt{\frac{1}{n - 1} \sum_{i=1}^n (T_i - \bar{T})^2}
-\]</div>
-<p>Using your data, this gives:</p>
-<div class="arithmatex">\[
-s \approx 0.014 \ \text{s}
+\bar{t}_{10} = \frac{147.2}{10} = 14.72 \ \text{s}
 \]</div>
 <hr/>
-<h3 id="4-standard-error-of-the-mean-sigma_bart">4. Standard Error of the Mean <span class="arithmatex">\(\sigma_{\bar{T}}\)</span></h3>
+<h3 id="3-period-mean-time-10">3. Period (Mean Time ÷ 10)</h3>
 <div class="arithmatex">\[
-\sigma_{\bar{T}} = \frac{s}{\sqrt{n}} = \frac{0.014}{\sqrt{10}} \approx 0.0044 \ \text{s}
+\bar{T} = \frac{\bar{t}_{10}}{10} = \frac{14.72}{10} = 1.472 \ \text{s}
 \]</div>
 <hr/>
-<h3 id="5-gravity-estimate-from-pendulum">5. Gravity Estimate from Pendulum</h3>
-<p>Using:</p>
+<h3 id="4-standard-deviation-of-time">4. Standard Deviation of Time</h3>
+<p>Let <span class="arithmatex">\(t_i\)</span> be each time for 10 swings. Then:</p>
+<div class="arithmatex">\[
+s_{10} = \sqrt{\frac{1}{n - 1} \sum_{i=1}^n (t_i - \bar{t}_{10})^2}
+\]</div>
+<p>Using your values, this gives:</p>
+<div class="arithmatex">\[
+s_{10} \approx 0.13 \ \text{s}
+\]</div>
+<p>So the <strong>standard deviation of one swing</strong> is:</p>
+<div class="arithmatex">\[
+s_T = \frac{s_{10}}{10} = \frac{0.13}{10} = 0.013 \ \text{s}
+\]</div>
+<hr/>
+<h3 id="5-standard-error-of-the-period">5. Standard Error of the Period</h3>
+<div class="arithmatex">\[
+\sigma_{\bar{T}} = \frac{s_T}{\sqrt{n}} = \frac{0.013}{\sqrt{10}} \approx 0.0041 \ \text{s}
+\]</div>
+<hr/>
+<h3 id="6-gravity-estimate">6. Gravity Estimate</h3>
+<p>Using the pendulum equation:</p>
 <div class="arithmatex">\[
 g = \frac{4\pi^2 L}{\bar{T}^2}, \quad L = 0.25 \ \text{m}, \quad \bar{T} = 1.472 \ \text{s}
 \]</div>
 <div class="arithmatex">\[
-g = \frac{4\pi^2 \cdot 0.25}{(1.472)^2} = \frac{9.8696 \cdot 0.25}{2.167} \approx \frac{2.467}{2.167} = 9.07 \ \text{m/s}^2
+g = \frac{4\pi^2 \cdot 0.25}{(1.472)^2} \approx \frac{9.8696 \cdot 0.25}{2.167} = \frac{2.4674}{2.167} \approx 9.07 \ \text{m/s}^2
 \]</div>
 <hr/>
-<h3 id="6-uncertainty-in-g">6. Uncertainty in <span class="arithmatex">\(g\)</span></h3>
-<h4 id="a-relative-errors">a) Relative errors:</h4>
+<h3 id="7-uncertainty-in-g">7. Uncertainty in <span class="arithmatex">\(g\)</span></h3>
+<h4 id="a-relative-error">a) Relative error:</h4>
+<p>Assuming:</p>
 <ul>
-<li><span class="arithmatex">\(\Delta L = 0.002 \ \text{m}\)</span> (estimated)</li>
-<li><span class="arithmatex">\(\Delta T = 0.0044 \ \text{s}\)</span></li>
+<li><span class="arithmatex">\(\Delta L = 0.002 \ \text{m}\)</span></li>
+<li><span class="arithmatex">\(\Delta T = 0.0041 \ \text{s}\)</span></li>
 </ul>
 <div class="arithmatex">\[
-\frac{\Delta g}{g} = \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2\frac{\Delta T}{T}\right)^2}
-= \sqrt{\left(\frac{0.002}{0.25}\right)^2 + \left(2 \cdot \frac{0.0044}{1.472}\right)^2}
+\frac{\Delta g}{g} = \sqrt{\left(\frac{0.002}{0.25}\right)^2 + \left(2 \cdot \frac{0.0041}{1.472}\right)^2}
+= \sqrt{(0.008)^2 + (0.00557)^2} \approx \sqrt{6.4 \times 10^{-5} + 3.1 \times 10^{-5}} \approx 0.0098
 \]</div>
+<h4 id="b-final-uncertainty">b) Final uncertainty:</h4>
 <div class="arithmatex">\[
-= \sqrt{(0.008)^2 + (0.00598)^2} = \sqrt{6.4 \times 10^{-5} + 3.58 \times 10^{-5}} \approx 0.0109
-\]</div>
-<h4 id="b-absolute-uncertainty">b) Absolute uncertainty:</h4>
-<div class="arithmatex">\[
-\Delta g = g \cdot \frac{\Delta g}{g} = 9.07 \cdot 0.0109 \approx 0.10 \ \text{m/s}^2
+\Delta g = g \cdot \frac{\Delta g}{g} = 9.07 \cdot 0.0098 \approx 0.09 \ \text{m/s}^2
 \]</div>
 <hr/>
 <h3 id="final-result">✅ Final Result:</h3>
 <div class="arithmatex">\[
-\boxed{g = 9.07 \pm 0.10 \ \text{m/s}^2}
+\boxed{g = 9.07 \pm 0.09 \ \text{m/s}^2}
 \]</div>
-<p>This result is within about <strong>0.7%</strong> of the accepted value <span class="arithmatex">\(9.81 \ \text{m/s}^2\)</span> — very accurate!</p>
+<p>Which is <strong>very close to the expected <span class="arithmatex">\(9.81\)</span> m/s²</strong> (about 0.7% difference).</p>
 <p>Relative error:</p>
 <div class="arithmatex">\[
 \epsilon = \frac{|9.07 - 9.81|}{9.81} \times 100\% \approx 7.55\%
