@@ -61,20 +61,26 @@ Reduce a resistor network to a single equivalent resistance between two terminal
 
 
 
-## Example 1: Parallel then Series
+## Example 1: Bridge Circuit
+
+![alt text](image.png) |![alt text](image-1.png) |
+  |:-------------------------:|:-------------------------:|
+![alt text](image-2.png) | ![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+
+## Example 2:  Series-Parallel Circuit
+
+
+![alt text](image-5.png) |![alt text](image-6.png) |
+  |:-------------------------:|:-------------------------:|
+![alt text](image-7.png) |![alt text](image-8.png)
 
 ![alt text](image-8.png) |![alt text](image-9.png) |
   |:-------------------------:|:-------------------------:|
 
 ![alt text](image-10.png)
-
-## Example 2: 
-
-
-![alt text](image-12.png) |![alt text](image-13.png) |
-  |:-------------------------:|:-------------------------:|
-
-![alt text](image-14.png)
 
 ##  Efficiency & Improvements
 
