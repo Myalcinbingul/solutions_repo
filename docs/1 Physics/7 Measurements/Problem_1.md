@@ -284,7 +284,7 @@ $$
 
 ## Student Notes
 
-> *"I tied my bracelet to a string about 25 cm long, then let it swing and timed 10 full oscillations. The results varied a bit, but averaged around 1 second — close to the predicted value."*
+> *"I tied my bracelet to a string about 25 cm long, then let it swing and timed 10 full oscillations. The results varied a bit, but averaged around 14 second — close to the predicted value."*
 
 ---
 
